@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Cover Letter</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Career Goals</title>
   <link rel="stylesheet" href="css/styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,17 +31,6 @@
       color: #fff;
       padding: 30px 20px;
       text-align: center;
-    }
-    nav {
-      background-color: #ddd;
-      text-align: center;
-      padding: 10px 0;
-    }
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #2c3e50;
-      font-weight: bold;
     }
     .section-box {
       background-color: #fff;
@@ -134,41 +124,31 @@
     <span id="modeLabel">🌞 Light Mode</span>
   </label>
 
-  <!-- === Navigation Bar === -->
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="coverletter.html">Cover Letter</a>
-    <a href="career-goals.html">Career Goals</a>
-  </nav>
-
   <!-- === Header === -->
   <header>
-    <h1>Cover Letter</h1>
+    <h1>Career Goals</h1>
     <p>Ashley "Patience" Hopkins</p>
   </header>
 
   <!-- === Main Content === -->
   <main>
     <article class="section-box">
-      <p><strong>Dear Hiring Manager,</strong></p>
+      <h2>My Career Vision</h2>
+      <p>I am pursuing a Bachelor of Science in Network Engineering and Security at WGU. My short-term goal is to earn key certifications like CompTIA Network+ and Cisco CCNA, while continuing to build hands-on experience through my home lab environment.</p>
 
-      <p>I am writing to express my enthusiasm for the [Job Title] role at [Company Name]. With a strong foundation in IT, hands-on networking experience, and a passion for secure infrastructure, I am eager to contribute to your team’s success.</p>
+      <p><em>Long-term</em>, I aim to become a skilled Network Security Engineer or Penetration Tester, protecting organizations from cyber threats. My passion lies in solving complex technical problems and contributing to safer, smarter systems.</p>
 
-      <p>Currently pursuing my degree in Network Engineering and Security at WGU, I have built a solid home lab setup for experimenting with routers, firewalls, and virtualization tools. My professional journey has been shaped by real-world troubleshooting, scripting, and supporting systems in dynamic environments. I am confident in my ability to solve problems and continually learn new technologies.</p>
+      <p><strong>Autism is not my weakness—it's my clarity.</strong> I bring focus, integrity, and persistence to everything I do. With every command line typed and every protocol understood, I grow more confident in my career choice.</p>
 
-      <p><em>What sets me apart</em> is my self-discipline, ability to adapt, and my genuine love for IT challenges. I take pride in documenting processes, staying organized, and collaborating with purpose.</p>
-
-      <p><mark>Thank you for your time and consideration.</mark> I look forward to the opportunity to discuss how my skills align with your team’s goals.</p>
-
-      <p>Sincerely,<br><strong>Ashley "Patience" Hopkins</strong></p>
+      <p><mark>My goal is simple:</mark> master the tech world and make it safer for everyone.</p>
     </article>
 
     <hr style="margin: 40px 0; border: 1px solid #ddd;">
 
     <!-- === Navigation Buttons === -->
     <section class="section-box" style="text-align: center;">
-      <a href="index.html" class="nav-button">← Back to Resume</a>
-      <a href="career-goals.html" class="nav-button">View Career Goals →</a>
+      <a href="coverletter.html" class="nav-button">← Back to Cover Letter</a>
+      <a href="index.html" class="nav-button">View Resume →</a>
     </section>
   </main>
 
@@ -187,22 +167,6 @@
     const currentDate = new Date();
     const dateString = currentDate.toLocaleDateString();
     console.log('Page loaded on: ' + dateString);
-
-    document.addEventListener('DOMContentLoaded', function() {
-      const dateDiv = document.getElementById('current-date');
-      if (dateDiv) {
-        dateDiv.textContent = dateString;
-      }
-    });
-
-    window.onload = function () {
-      const toggle = document.getElementById("darkModeToggle");
-      const label = document.getElementById("modeLabel");
-      toggle.addEventListener("change", () => {
-        document.body.classList.toggle("dark-mode");
-        label.textContent = toggle.checked ? "🌙 Dark Mode" : "☀️ Light Mode";
-      });
-    };
   </script>
 </body>
 </html>
