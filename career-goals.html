@@ -184,44 +184,18 @@
       <hr style="margin: 20px 0; border: 1px solid #ddd;">
     </article>
 
-    <!-- === Contact Form Section === -->
-    <section class="section-box">
-      <form style="max-width: 600px;">
-        <p>
-          <input type="text" id="contact-name" name="contact-name" placeholder="Your Name" style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;">
-        </p>
-        
-        <p>
-          <input type="email" id="contact-email" name="contact-email" placeholder="Your Email" style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;">
-        </p>
+   <form>
+  <label for="fieldSelect">Select a field of interest:</label><br><br>
+  <select id="fieldSelect" name="fieldSelect">
+    <option value="">--Please choose an option--</option>
+    <option value="cloud">Cloud Computing</option>
+    <option value="cybersecurity">Cybersecurity</option>
+    <option value="networking">Networking</option>
+    <option value="linux">Linux System Admin</option>
+  </select>
+</form>
 
-        <p>
-          <textarea id="message" name="message" rows="4" placeholder="Your Message" style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px; resize: vertical;"></textarea>
-        </p>
-
-        <p>
-          <input type="radio" id="am" name="contact-time" value="am">
-          <label for="am">AM</label>
-          <input type="radio" id="pm" name="contact-time" value="pm">
-          <label for="pm">PM</label>
-          <input type="radio" id="anytime" name="contact-time" value="anytime" checked>
-          <label for="anytime">Anytime</label>
-        </p>
-
-        <p>
-          <select id="industry" name="industry" style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;">
-            <option value="">Select Industry</option>
-            <option value="technology">Technology</option>
-            <option value="education">Education</option>
-            <option value="government">Government</option>
-            <option value="healthcare">Healthcare</option>
-            <option value="finance">Finance</option>
-          </select>
-        </p>
-      </form>
-    </section>
-
-    <!-- === Thank You Box === -->
+   <!-- === Thank You Box === -->
     <section class="section-box" style="text-align: center;">
       <p style="font-size: 1.1rem;">
         Thank you for reviewing my career goals. I appreciate your time and interest in my journey.
