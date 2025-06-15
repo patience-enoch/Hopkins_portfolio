@@ -94,7 +94,7 @@
 <body id="top">
 
   <!-- === Navigation === -->
-  <nav aria-label="Main site navigation">
+  <nav>
     <ul style="list-style: none; padding: 0; margin: 0; background-color: #34495e; text-align: center;">
       <li style="display: inline-block; margin: 0 10px;">
         <a href="#top" style="color: #fff; text-decoration: none; padding: 10px 15px; display: block;">Home</a>
@@ -127,7 +127,7 @@
 
   <!-- === Main Content === -->
   <main>
-    <!-- === Image + Summary === -->
+    <!-- === Summary Section === -->
     <article class="section-box" style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 40px;">
       <img src="images/waterfall-profile.jpeg" width="300"
            style="border: 3px solid #2c3e50; border-radius: 15px; box-shadow: 0px 4px 20px rgba(0,0,0,0.2);"
@@ -149,7 +149,7 @@
       <a href="career-goals.html" class="nav-button">View My Career Goals</a>
     </section>
 
-    <!-- === Skills === -->
+    <!-- === Skills Section === -->
     <section class="section-box" id="skills">
       <h2>Technical Skills</h2>
       <h3>Networking</h3>
@@ -185,7 +185,7 @@
       </ul>
     </section>
 
-    <!-- === Education === -->
+    <!-- === Education Section === -->
     <section class="section-box" id="education">
       <h2>Education</h2>
       <h3>Western Governors University</h3>
@@ -208,7 +208,7 @@
       </ul>
     </section>
 
-    <!-- === Table === -->
+    <!-- === Skills Table === -->
     <section class="section-box">
       <h2>Skills Summary</h2>
       <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
@@ -244,14 +244,45 @@
       </table>
     </section>
 
+    <!-- === Form Section === -->
+    <section class="section-box">
+      <h2>Quick Contact Form</h2>
+      <form>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+        <label>Best Time to Contact:</label><br>
+        <input type="radio" id="am" name="contacttime" value="am">
+        <label for="am">AM</label><br>
+        <input type="radio" id="pm" name="contacttime" value="pm">
+        <label for="pm">PM</label><br>
+        <input type="radio" id="anytime" name="contacttime" value="anytime" checked>
+        <label for="anytime">Anytime</label><br><br>
+
+        <label for="role">What role are you hiring for?</label><br>
+        <select id="role" name="role">
+          <option value="network">Network Engineer</option>
+          <option value="security">Cybersecurity</option>
+          <option value="it-support">IT Support</option>
+        </select><br><br>
+
+        <input type="submit" value="Send Message">
+      </form>
+    </section>
+
     <hr style="margin: 40px 0; border: 1px solid #ddd;">
 
     <!-- === Thank You === -->
     <section class="section-box" style="text-align: center;">
       <p style="font-size: 1.1rem; background-color: #e8f4fd; color: #2c3e50; padding: 8px 12px; border-radius: 6px; display: inline-block;">
-  Thank you for reviewing my resume.
-</p>
-
+        Thank you for reviewing my resume.
+      </p>
       <div id="current-date" style="margin-top: 10px; font-size: 0.9rem; color: #666;"></div>
     </section>
   </main>
@@ -272,7 +303,7 @@
     const dateString = currentDate.toLocaleDateString();
     console.log('Page loaded on: ' + dateString);
 
-    document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('DOMContentLoaded', function() {
       const dateDiv = document.getElementById('current-date');
       if (dateDiv) {
         dateDiv.textContent = dateString;
@@ -289,4 +320,3 @@
 
 </body>
 </html>
-
