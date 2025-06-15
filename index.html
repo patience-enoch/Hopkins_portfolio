@@ -448,9 +448,11 @@
     width: 60px;
     height: 60px;
   }
-  
+
   .success-icon svg {
-    width: 30px
+    width: 30px;
+    height: 30px;
+  }
     
   </style>
 </head>
@@ -539,8 +541,7 @@
   </ul>
 </section>
 
-    
-
+  
     <!-- === Experience Table (Adding article and table elements) === -->
     <article class="section-box">
       <table class="experience-table">
@@ -626,20 +627,6 @@
     <p>Thank you for reaching out. I'll get back to you within 24 hours.</p>
   </div>
 </section>
-
-<style>
-<!-- === Contact Form === -->
-<section class="section-box" id="contact-form">
-  <h2>Contact Me</h2>
-  <div id="formWrapper">
-    <form id="contactForm" onsubmit="submitForm(event)" class="beautiful-form">
-      <!-- ... the form content ... -->
-    </form>
-  </div>
-  <div id="thankYouMessage" class="success-message">
-    <!-- ... success message ... -->
-  </div>
-</section>
     
      <!-- === Thank You === -->
     <section class="section-box" style="text-align: center;">
@@ -687,15 +674,6 @@
       toggle.addEventListener("change", () => {
         document.body.classList.toggle("dark-mode");
         label.textContent = toggle.checked ? "🌙 Dark Mode" : "🌞 Light Mode";
-      });
-
-      // Form submission
-      const form = document.getElementById("resumeContactForm");
-      const thankYou = document.getElementById("thankYouMsg");
-      form.addEventListener("submit", function(e) {
-        e.preventDefault();
-        form.style.display = "none";
-        thankYou.style.display = "block";
       });
 
       // Display current date
