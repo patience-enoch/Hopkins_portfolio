@@ -3,42 +3,87 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Cover Letter</title>
+  <title>My Cover Letter</title>
   <link rel="stylesheet" href="css/styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      background-color: #f7f9fc;
-      color: #333;
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #f0f4f8;
+      color: #222;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-weight: 400;
       line-height: 1.6;
     }
+    .dark-mode {
+      background-color: #121212;
+      color: #f0f0f0;
+    }
     header {
-      text-align: center;
       background-color: #2c3e50;
       color: #fff;
-      padding: 2rem 1rem;
+      padding: 30px 20px;
+      text-align: center;
+    }
+    nav {
+      background-color: #ddd;
+      text-align: center;
+      padding: 10px 0;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #2c3e50;
+      font-weight: bold;
     }
     .section-box {
-      max-width: 800px;
       background-color: #fff;
-      margin: 2rem auto;
-      padding: 2rem;
-      border-radius: 15px;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
+      padding: 25px;
+      margin: 25px auto;
+      max-width: 900px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    }
+    .dark-mode .section-box {
+      background-color: #1e1e1e;
+    }
+    h2 {
+      font-weight: 600;
+      font-size: 1.8rem;
+      margin-bottom: 1.2rem;
+    }
+    h3 {
+      font-weight: 500;
+      font-size: 1.3rem;
+      margin-bottom: 0.8rem;
+      margin-top: 0;
     }
     p {
-      margin-bottom: 1.2rem;
-      font-size: 1rem;
+      margin-bottom: 1rem;
     }
-    mark {
-      background-color: yellow;
+    .nav-button {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 20px;
+      background-color: #2c3e50;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background-color 0.3s;
     }
-    .dark-toggle {
+    .nav-button:hover {
+      background-color: #1a252f;
+    }
+    .dark-mode .nav-button {
+      background-color: #444;
+    }
+    .switch {
       position: fixed;
       top: 20px;
       right: 20px;
@@ -46,6 +91,11 @@
       align-items: center;
       gap: 10px;
       z-index: 1000;
+    }
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
     }
     .slider {
       position: relative;
@@ -68,86 +118,92 @@
       border-radius: 50%;
       transition: transform 0.4s;
     }
-    input[type="checkbox"] {
-      opacity: 0;
-      width: 0;
-      height: 0;
-    }
     input:checked + .slider {
       background-color: #4a90e2;
     }
     input:checked + .slider:before {
       transform: translateX(22px);
     }
-    .dark-mode {
-      background-color: #121212;
-      color: #f0f0f0;
-    }
-    .dark-mode .section-box {
-      background-color: #1e1e1e;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background-color: #f0f4f8;
-      border-top: 2px solid #ccc;
-    }
   </style>
 </head>
-<body>
-
+<body id="top">
   <!-- === Dark Mode Toggle === -->
-  <label class="dark-toggle">
+  <label class="switch">
     <input type="checkbox" id="darkModeToggle">
     <span class="slider round"></span>
     <span id="modeLabel">🌞 Light Mode</span>
   </label>
 
+  <!-- === Navigation Bar === -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="coverletter.html">Cover Letter</a>
+    <a href="career-goals.html">Career Goals</a>
+  </nav>
+
   <!-- === Header === -->
   <header>
     <h1>Cover Letter</h1>
+    <p>Ashley "Patience" Hopkins</p>
   </header>
 
-  <!-- === Cover Letter Content === -->
-  <section class="section-box">
-    <p>To the keepers of opportunity,</p>
+  <!-- === Main Content === -->
+  <main>
+    <article class="section-box">
+      <p><strong>Dear Hiring Manager,</strong></p>
 
-    <p>I am writing to express my enthusiasm for a remote placement in network security or cloud administration. As an autistic professional, I thrive in focused environments and bring a <strong>high level of detail, persistence, and integrity</strong> to everything I do. I am currently earning a degree in network engineering and security while building hands-on experience in <em>Linux, cybersecurity, and cloud technologies</em>.</p>
+      <p>I am writing to express my enthusiasm for the [Job Title] role at [Company Name]. With a strong foundation in IT, hands-on networking experience, and a passion for secure infrastructure, I am eager to contribute to your team’s success.</p>
 
-    <p>My background in self-learning, IT troubleshooting, and server management has given me the confidence and resilience to take on technical challenges. I especially enjoy setting up virtual machines, self-hosting cloud tools, and solving <mark>real-world problems</mark>. I am excited about joining a team that values continuous learning, creative thinking, and interesting learning curves.</p>
+      <p>Currently pursuing my degree in Network Engineering and Security at WGU, I have built a solid home lab setup for experimenting with routers, firewalls, and virtualization tools. My professional journey has been shaped by real-world troubleshooting, scripting, and supporting systems in dynamic environments. I am confident in my ability to solve problems and continually learn new technologies.</p>
 
-    <p>Thank you.</p>
+      <p><em>What sets me apart</em> is my self-discipline, ability to adapt, and my genuine love for IT challenges. I take pride in documenting processes, staying organized, and collaborating with purpose.</p>
 
-    <p>Sincerely,</p>
-    <p><strong>Ashley Hopkins</strong></p>
-  </section>
+      <p><mark>Thank you for your time and consideration.</mark> I look forward to the opportunity to discuss how my skills align with your team’s goals.</p>
 
-  <!-- ✅ KEEP THIS: Button-style nav at bottom -->
-  <section class="section-box" style="text-align: center;">
-    <a href="index.html" style="display: inline-block; padding: 10px 20px; margin: 10px; background-color: #2c3e50; color: white; border-radius: 6px; text-decoration: none;">
-      ← Back to Home
-    </a>
-    <a href="career-goals.html" style="display: inline-block; padding: 10px 20px; margin: 10px; background-color: #2c3e50; color: white; border-radius: 6px; text-decoration: none;">
-      → Career Goals
-    </a>
-  </section>
+      <p>Sincerely,<br><strong>Ashley "Patience" Hopkins</strong></p>
+    </article>
 
-  <!-- === Footer === -->
-  <footer>
-    <p>© 2025 Ashley Hopkins - Professional Documents</p>
+    <hr style="margin: 40px 0; border: 1px solid #ddd;">
+
+    <!-- === Navigation Buttons === -->
+    <section class="section-box" style="text-align: center;">
+      <a href="index.html" class="nav-button">← Back to Resume</a>
+      <a href="career-goals.html" class="nav-button">View Career Goals →</a>
+    </section>
+  </main>
+
+  <!-- === Footer / Contact === -->
+  <footer id="contact" class="section-box">
+    <h2>Contact</h2>
+    <p><strong>Email:</strong> <a href="mailto:ahopki29@wgu.edu">ahopki29@wgu.edu</a></p>
+    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/patience-hopkins-432244329/" target="_blank">linkedin.com/in/patience-hopkins</a></p>
+    <p style="margin-top: 1.5rem;">
+      <a href="#top" class="nav-button">↑ Back to Top</a>
+    </p>
   </footer>
 
-  <!-- === Script === -->
+  <!-- === JavaScript === -->
   <script>
+    const currentDate = new Date();
+    const dateString = currentDate.toLocaleDateString();
+    console.log('Page loaded on: ' + dateString);
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const dateDiv = document.getElementById('current-date');
+      if (dateDiv) {
+        dateDiv.textContent = dateString;
+      }
+    });
+
     window.onload = function () {
       const toggle = document.getElementById("darkModeToggle");
       const label = document.getElementById("modeLabel");
       toggle.addEventListener("change", () => {
         document.body.classList.toggle("dark-mode");
-        label.textContent = toggle.checked ? "🌙 Dark Mode" : "🌞 Light Mode";
+        label.textContent = toggle.checked ? "🌙 Dark Mode" : "☀️ Light Mode";
       });
     };
   </script>
-
 </body>
 </html>
+
