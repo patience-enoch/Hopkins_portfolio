@@ -1,15 +1,25 @@
-<!DOCTYPE html>
+<!-- === Dark Mode Toggle === -->
+  <label class="switch">
+    <input type="checkbox" id="darkModeToggle">
+    <span class="slider round"></span>
+    <span id="modeLabel">🌞 Light Mode</span>
+  </label><!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>My Resume</title>
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
     body {
       background-color: #f0f4f8;
       color: #222;
-      font-family: Arial, sans-serif;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-weight: 400;
+      line-height: 1.6;
     }
     .dark-mode {
       background-color: #121212;
@@ -24,13 +34,32 @@
     .section-box {
       background-color: #fff;
       border-radius: 12px;
-      padding: 20px;
-      margin: 30px auto;
+      padding: 25px;
+      margin: 25px auto;
       max-width: 900px;
       box-shadow: 0 6px 16px rgba(0,0,0,0.1);
     }
     .dark-mode .section-box {
       background-color: #1e1e1e;
+    }
+    h2 {
+      font-weight: 600;
+      font-size: 1.8rem;
+      margin-bottom: 1.2rem;
+    }
+    h3 {
+      font-weight: 500;
+      font-size: 1.3rem;
+      margin-bottom: 0.8rem;
+      margin-top: 0;
+    }
+    ul {
+      margin-bottom: 1.5rem;
+      padding-left: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.6rem;
+      font-size: 1rem;
     }
     .nav-button {
       display: inline-block;
@@ -128,37 +157,52 @@
     <!-- === Technical Skills === -->
     <section class="section-box" id="skills">
       <h2>Technical Skills</h2>
-      <h3>Networking</h3>
-      <ul>
-        <li>TCP/IP, DNS, DHCP, NAT, subnetting, VLANs</li>
-        <li>Routing & switching concepts</li>
-        <li>Home lab experience with routers, switches, and firewalls</li>
-        <li>Cisco Packet Tracer and Wireshark</li>
-      </ul>
-      <h3>Systems Administration</h3>
-      <ul>
-        <li>Linux (Ubuntu-Server, Kali) – file systems, user management, permissions</li>
-        <li>Windows – system setup, hardware/software troubleshooting</li>
-        <li>Bash scripting and command-line tools</li>
-      </ul>
-      <h3>Web & Tools</h3>
-      <ul>
-        <li>HTML, CSS, basic JavaScript</li>
-        <li>Web development fundamentals</li>
-        <li>Docker (basic), NGINX, self-hosted services</li>
-      </ul>
-      <h3>Technical Support & IT Essentials</h3>
-      <ul>
-        <li>PC hardware installation, maintenance, and repair</li>
-        <li>Troubleshooting peripherals, network connections, and OS issues</li>
-        <li>Understanding of system security, malware, and firewalls</li>
-      </ul>
-      <h3>Soft Skills</h3>
-      <ul>
-        <li>Fast learner with hands-on approach</li>
-        <li>Strong troubleshooting and documentation skills</li>
-        <li>Self-motivated and able to work independently</li>
-      </ul>
+      
+      <div class="section-box">
+        <h3>Networking</h3>
+        <ul>
+          <li>TCP/IP, DNS, DHCP, NAT, subnetting, VLANs</li>
+          <li>Routing & switching concepts</li>
+          <li>Home lab experience with routers, switches, and firewalls</li>
+          <li>Cisco Packet Tracer and Wireshark</li>
+        </ul>
+      </div>
+      
+      <div class="section-box">
+        <h3>Systems Administration</h3>
+        <ul>
+          <li>Linux (Ubuntu-Server, Kali) – file systems, user management, permissions</li>
+          <li>Windows – system setup, hardware/software troubleshooting</li>
+          <li>Bash scripting and command-line tools</li>
+        </ul>
+      </div>
+      
+      <div class="section-box">
+        <h3>Web & Tools</h3>
+        <ul>
+          <li>HTML, CSS, basic JavaScript</li>
+          <li>Web development fundamentals</li>
+          <li>Docker (basic), NGINX, self-hosted services</li>
+        </ul>
+      </div>
+      
+      <div class="section-box">
+        <h3>Technical Support & IT Essentials</h3>
+        <ul>
+          <li>PC hardware installation, maintenance, and repair</li>
+          <li>Troubleshooting peripherals, network connections, and OS issues</li>
+          <li>Understanding of system security, malware, and firewalls</li>
+        </ul>
+      </div>
+      
+      <div class="section-box">
+        <h3>Soft Skills</h3>
+        <ul>
+          <li>Fast learner with hands-on approach</li>
+          <li>Strong troubleshooting and documentation skills</li>
+          <li>Self-motivated and able to work independently</li>
+        </ul>
+      </div>
     </section>
 
     <!-- === Education === -->
