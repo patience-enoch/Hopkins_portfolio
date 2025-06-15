@@ -453,7 +453,19 @@
     width: 30px;
     height: 30px;
   }
-    
+
+mark {
+  background-color: #cce5ff; /* Light blue */
+  color: #004085; /* Dark blue text for contrast */
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+.dark-mode mark {
+  background-color: #004085; /* Darker blue for dark mode */
+  color: #cce5ff; /* Light blue text for contrast in dark mode */
+}
+  
   </style>
 </head>
 <body id="top">
@@ -629,14 +641,14 @@
   </div>
 </section>
     
-    <!-- === Thank You === -->
+   <!-- === Thank You === -->
 <section class="section-box" style="text-align: center;">
   <p style="font-size: 1.1rem;">
     <mark>Thank you for taking time to read my resume.</mark>
   </p>
 </section>
- 
-    <!-- === Contact === -->
+
+   <!-- === Contact === -->
     <section class="section-box" id="contact" style="text-align: center;">
       <h2>Contact</h2>
       <p><strong>Email:</strong> <a href="mailto:ahopki29@wgu.edu">ahopki29@wgu.edu</a></p>
