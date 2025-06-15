@@ -5,91 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>My Resume</title>
   <link rel="stylesheet" href="css/styles.css">
-  <style>
-    body {
-      background-color: #f0f4f8;
-      color: #222;
-      font-family: Arial, sans-serif;
-    }
-    .dark-mode {
-      background-color: #121212;
-      color: #f0f0f0;
-    }
-    header {
-      background-color: #2c3e50;
-      color: #fff;
-      padding: 30px 20px;
-      text-align: center;
-    }
-    .section-box {
-      background-color: #fff;
-      border-radius: 12px;
-      padding: 20px;
-      margin: 30px auto;
-      max-width: 900px;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
-    }
-    .dark-mode .section-box {
-      background-color: #1e1e1e;
-    }
-    .nav-button {
-      display: inline-block;
-      margin: 10px;
-      padding: 10px 20px;
-      background-color: #2c3e50;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 6px;
-      transition: background-color 0.3s;
-    }
-    .nav-button:hover {
-      background-color: #1a252f;
-    }
-    .dark-mode .nav-button {
-      background-color: #444;
-    }
-    .switch {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      z-index: 1000;
-    }
-    .switch input {
-      opacity: 0;
-      width: 0;
-      height: 0;
-    }
-    .slider {
-      position: relative;
-      display: inline-block;
-      width: 50px;
-      height: 28px;
-      background-color: #ccc;
-      border-radius: 34px;
-      cursor: pointer;
-      transition: background-color 0.4s;
-    }
-    .slider:before {
-      content: "";
-      position: absolute;
-      height: 20px;
-      width: 20px;
-      left: 4px;
-      bottom: 4px;
-      background-color: white;
-      border-radius: 50%;
-      transition: transform 0.4s;
-    }
-    input:checked + .slider {
-      background-color: #4a90e2;
-    }
-    input:checked + .slider:before {
-      transform: translateX(22px);
-    }
-  </style>
 </head>
 <body id="top">
 
@@ -107,107 +22,178 @@
     <p style="font-size: 1rem;">Night Owl 🦉</p>
   </header>
 
-  <!-- === Image + Summary === -->
-  <section class="section-box" style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 40px;">
-    <img src="images/waterfall-profile.jpeg" width="300"
-         style="border: 3px solid #2c3e50; border-radius: 15px; box-shadow: 0px 4px 20px rgba(0,0,0,0.2);"
-         alt="Ashley sitting at a waterfall">
+  <main>
+    <!-- === Image + Summary === -->
+    <article class="section-box" style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 40px;">
+      <img src="images/waterfall-profile.jpeg" width="300"
+           style="border: 3px solid #2c3e50; border-radius: 15px; box-shadow: 0px 4px 20px rgba(0,0,0,0.2);"
+           alt="Ashley sitting at a waterfall">
 
-    <div style="max-width: 480px;">
-      <h2 style="margin-top: 0;">Professional Summary</h2>
-      <p>
-        Entry-level Network Engineer with hands-on experience configuring routers, switches, and firewalls in home lab environments.
-        Strong background in Linux administration and system troubleshooting. Currently pursuing a Bachelor’s in Network Engineering and
-        Security at WGU, with a passion for building secure, reliable networks and solving complex technical challenges.
+      <div style="max-width: 480px;">
+        <h2 style="margin-top: 0;">Professional Summary</h2>
+        <p>
+          Entry-level Network Engineer with hands-on experience configuring routers, switches, and firewalls in home lab environments.
+          Strong background in Linux administration and system troubleshooting. Currently pursuing a Bachelor's in Network Engineering and
+          Security at WGU, with a passion for building <em>secure, reliable networks</em> and solving complex technical challenges.
+        </p>
+      </div>
+    </article>
+
+    <!-- === Navigation Buttons === -->
+    <section class="section-box" style="text-align: center;">
+      <h2>Additional Documents</h2>
+      <a href="coverletter.html" class="nav-button">View My Cover Letter</a>
+      <a href="career-goals.html" class="nav-button">View My Career Goals</a>
+    </section>
+
+    <!-- === nav element === -->
+    <nav>
+      <section class="section-box" style="text-align: center;">
+        <a href="#top" style="margin: 0 10px; color: #2c3e50; text-decoration: none;">Home</a> |
+        <a href="#skills" style="margin: 0 10px; color: #2c3e50; text-decoration: none;">Skills</a> |
+        <a href="#education" style="margin: 0 10px; color: #2c3e50; text-decoration: none;">Education</a> |
+        <a href="#contact" style="margin: 0 10px; color: #2c3e50; text-decoration: none;">Contact</a>
+      </section>
+    </nav>
+
+    <!-- === Technical Skills === -->
+    <section class="section-box" id="skills">
+      <h2>Technical Skills</h2>
+      <h3>Networking</h3>
+      <ul>
+        <li>TCP/IP, DNS, DHCP, NAT, subnetting, VLANs</li>
+        <li>Routing & switching concepts</li>
+        <li>Home lab experience with routers, switches, and firewalls</li>
+        <li>Cisco Packet Tracer and Wireshark</li>
+      </ul>
+      <h3>Systems Administration</h3>
+      <ul>
+        <li>Linux (Ubuntu-Server, Kali) – file systems, user management, permissions</li>
+        <li>Windows – system setup, hardware/software troubleshooting</li>
+        <li>Bash scripting and command-line tools</li>
+      </ul>
+      <h3>Web & Tools</h3>
+      <ul>
+        <li>HTML, CSS, basic JavaScript</li>
+        <li>Web development fundamentals</li>
+        <li>Docker (basic), NGINX, self-hosted services</li>
+      </ul>
+      <h3>Technical Support & IT Essentials</h3>
+      <ul>
+        <li>PC hardware installation, maintenance, and repair</li>
+        <li>Troubleshooting peripherals, network connections, and OS issues</li>
+        <li>Understanding of system security, malware, and firewalls</li>
+      </ul>
+      <h3>Soft Skills</h3>
+      <ul>
+        <li>Fast learner with hands-on approach</li>
+        <li>Strong troubleshooting and documentation skills</li>
+        <li>Self-motivated and able to work independently</li>
+      </ul>
+    </section>
+
+    <!-- === Education === -->
+    <section class="section-box" id="education">
+      <h2>Education</h2>
+      <h3>Western Governors University</h3>
+      <p><strong>Bachelor of Science in Network Engineering and Security</strong></p>
+      <p>Expected Graduation: May 2026</p>
+      <p>Relevant Coursework: Networking, Linux, Cybersecurity, TCP/IP, Troubleshooting</p>
+
+      <h3>Fairview High School</h3>
+      <p><strong>Advanced Diploma</strong>, Class of 2006</p>
+      <p>Focus: Web Development</p>
+    </section>
+
+    <!-- === Certifications === -->
+    <section class="section-box" id="certifications">
+      <h2>Certifications</h2>
+      <ul>
+        <li>CompTIA IT Fundamentals</li>
+        <li>CompTIA A+</li>
+        <li>Linux Essentials</li>
+      </ul>
+    </section>
+
+    <br>
+
+    <!-- === Data Table === -->
+    <section class="section-box">
+      <h2>Skills Summary</h2>
+      <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+        <caption style="margin-bottom: 10px; font-weight: bold;">Technical Skills Overview</caption>
+        <thead>
+          <tr style="background-color: #2c3e50; color: white;">
+            <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Category</th>
+            <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Primary Skills</th>
+            <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Experience Level</th>
+            <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Years</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="border: 1px solid #ddd; padding: 8px;">Networking</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">TCP/IP, Routing, Switching</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">Intermediate</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">7</td>
+          </tr>
+          <tr style="background-color: #f9f9f9;">
+            <td style="border: 1px solid #ddd; padding: 8px;">Linux Admin</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">Ubuntu, System Management</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">Intermediate</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">3</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #ddd; padding: 8px;">Web Development</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">HTML, CSS, JavaScript</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">Advanced</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">20</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- hr element -->
+    <hr style="margin: 40px 0; border: 1px solid #ddd;">
+
+    <!-- === Thank You === -->
+    <section class="section-box" style="text-align: center;">
+      <p style="font-size: 1.1rem;">
+        Thank you for reviewing my resume.
       </p>
-    </div>
-  </section>
+      <!-- div for date population  -->
+      <div id="current-date" style="margin-top: 10px; font-size: 0.9rem; color: #666;"></div>
+    </section>
+  </main>
 
-  <!-- === Navigation Buttons === -->
-  <section class="section-box" style="text-align: center;">
-    <h2>Additional Documents</h2>
-    <a href="coverletter.html" class="nav-button">View My Cover Letter</a>
-    <a href="career-goals.html" class="nav-button">View My Career Goals</a>
-  </section>
-
-  <!-- === Technical Skills === -->
-  <section class="section-box" id="skills">
-    <h2>Technical Skills</h2>
-    <h3>Networking</h3>
-    <ul>
-      <li>TCP/IP, DNS, DHCP, NAT, subnetting, VLANs</li>
-      <li>Routing & switching concepts</li>
-      <li>Home lab experience with routers, switches, and firewalls</li>
-      <li>Cisco Packet Tracer and Wireshark</li>
-    </ul>
-    <h3>Systems Administration</h3>
-    <ul>
-      <li>Linux (Ubuntu-Server, Kali) – file systems, user management, permissions</li>
-      <li>Windows – system setup, hardware/software troubleshooting</li>
-      <li>Bash scripting and command-line tools</li>
-    </ul>
-    <h3>Web & Tools</h3>
-    <ul>
-      <li>HTML, CSS, basic JavaScript</li>
-      <li>Web development fundamentals</li>
-      <li>Docker (basic), NGINX, self-hosted services</li>
-    </ul>
-    <h3>Technical Support & IT Essentials</h3>
-    <ul>
-      <li>PC hardware installation, maintenance, and repair</li>
-      <li>Troubleshooting peripherals, network connections, and OS issues</li>
-      <li>Understanding of system security, malware, and firewalls</li>
-    </ul>
-    <h3>Soft Skills</h3>
-    <ul>
-      <li>Fast learner with hands-on approach</li>
-      <li>Strong troubleshooting and documentation skills</li>
-      <li>Self-motivated and able to work independently</li>
-    </ul>
-  </section>
-
-  <!-- === Education === -->
-  <section class="section-box" id="education">
-    <h2>Education</h2>
-    <h3>Western Governors University</h3>
-    <p><strong>Bachelor of Science in Network Engineering and Security</strong></p>
-    <p>Expected Graduation: May 2026</p>
-    <p>Relevant Coursework: Networking, Linux, Cybersecurity, TCP/IP, Troubleshooting</p>
-
-    <h3>Fairview High School</h3>
-    <p><strong>Advanced Diploma</strong>, Class of 2006</p>
-    <p>Focus: Web Development</p>
-  </section>
-
-  <!-- === Certifications === -->
-  <section class="section-box" id="certifications">
-    <h2>Certifications</h2>
-    <ul>
-      <li>CompTIA IT Fundamentals</li>
-      <li>CompTIA A+</li>
-      <li>Linux Essentials</li>
-    </ul>
-  </section>
-
-  <!-- === Thank You === -->
-  <section class="section-box" style="text-align: center;">
-    <p style="font-size: 1.1rem;">
-      Thank you for reviewing my resume.
-    </p>
-  </section>
-
-  <!-- === Contact === -->
-  <section id="contact" class="section-box">
+  <!-- footer -->
+  <footer id="contact" class="section-box">
     <h2>Contact</h2>
     <p><strong>Email:</strong> <a href="mailto:ahopki29@wgu.edu">ahopki29@wgu.edu</a></p>
     <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/patience-hopkins-432244329/" target="_blank">linkedin.com/in/patience-hopkins</a></p>
     <p style="margin-top: 1.5rem;">
       <a href="#top" class="nav-button">↑ Back to Top</a>
     </p>
-  </section>
+  </footer>
 
   <!-- === JavaScript === -->
   <script>
+    // Added console.log as required
+    console.log('Resume page loaded successfully');
+    
+    // Current date display and population to div
+    const currentDate = new Date();
+    const dateString = currentDate.toLocaleDateString();
+    console.log('Today\'s date: ' + dateString);
+    
+    // Populate date to div 
+    document.addEventListener('DOMContentLoaded', function() {
+      const dateDiv = document.getElementById('current-date');
+      if (dateDiv) {
+        dateDiv.textContent = "Today's date: " + dateString;
+      }
+    });
+
     window.onload = function () {
       const toggle = document.getElementById("darkModeToggle");
       const label = document.getElementById("modeLabel");
