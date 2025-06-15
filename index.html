@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Resume</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    body {
+      background-color: #f0f4f8;
+      color: #222;
+      font-family: Arial, sans-serif;
+    }
+    .dark-mode {
+      background-color: #121212;
+      color: #f0f0f0;
+    }
+    header {
+      background-color: #2c3e50;
+      color: #fff;
+      padding: 30px 20px;
+      text-align: center;
+    }
+    .section-box {
+      background-color: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      margin: 30px auto;
+      max-width: 900px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    }
+    .dark-mode .section-box {
+      background-color: #1e1e1e;
+    }
+    .nav-button {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 20px;
+      background-color: #2c3e50;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background-color 0.3s;
+    }
+    .nav-button:hover {
+      background-color: #1a252f;
+    }
+    .dark-mode .nav-button {
+      background-color: #444;
+    }
+    .switch {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      z-index: 1000;
+    }
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    .slider {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 28px;
+      background-color: #ccc;
+      border-radius: 34px;
+      cursor: pointer;
+      transition: background-color 0.4s;
+    }
+    .slider:before {
+      content: "";
+      position: absolute;
+      height: 20px;
+      width: 20px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      border-radius: 50%;
+      transition: transform 0.4s;
+    }
+    input:checked + .slider {
+      background-color: #4a90e2;
+    }
+    input:checked + .slider:before {
+      transform: translateX(22px);
+    }
+  </style>
+</head>
+<body id="top">
+
+  <!-- === Dark Mode Toggle === -->
+  <label class="switch">
+    <input type="checkbox" id="darkModeToggle">
+    <span class="slider round"></span>
+    <span id="modeLabel">🌞 Light Mode</span>
+  </label>
+
+  <!-- === Header === -->
+  <header>
+    <h1>Ashley "Patience" Hopkins</h1>
+    <p>Future Network Engineer</p>
+    <p style="font-size: 1rem;">Night Owl 🦉</p>
+  </header>
+
+  <!-- === Image + Summary === -->
+  <section class="section-box" style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 40px;">
+    <img src="images/waterfall-profile.jpeg" width="300"
+         style="border: 3px solid #2c3e50; border-radius: 15px; box-shadow: 0px 4px 20px rgba(0,0,0,0.2);"
+         alt="Ashley sitting at a waterfall">
+
+    <div style="max-width: 480px;">
+      <h2 style="margin-top: 0;">Professional Summary</h2>
+      <p>
+        Entry-level Network Engineer with hands-on experience configuring routers, switches, and firewalls in home lab environments.
+        Strong background in Linux administration and system troubleshooting. Currently pursuing a Bachelor’s in Network Engineering and
+        Security at WGU, with a passion for building secure, reliable networks and solving complex technical challenges.
+      </p>
+    </div>
+  </section>
+
+  <!-- === Navigation Buttons === -->
+  <section class="section-box" style="text-align: center;">
+    <h2>Additional Documents</h2>
+    <a href="coverletter.html" class="nav-button">View My Cover Letter</a>
+    <a href="career-goals.html" class="nav-button">View My Career Goals</a>
+  </section>
+
+  <!-- === Technical Skills === -->
+  <section class="section-box" id="skills">
+    <h2>Technical Skills</h2>
+    <h3>Networking</h3>
+    <ul>
+      <li>TCP/IP, DNS, DHCP, NAT, subnetting, VLANs</li>
+      <li>Routing & switching concepts</li>
+      <li>Home lab experience with routers, switches, and firewalls</li>
+      <li>Cisco Packet Tracer and Wireshark</li>
+    </ul>
+    <h3>Systems Administration</h3>
+    <ul>
+      <li>Linux (Ubuntu-Server, Kali) – file systems, user management, permissions</li>
+      <li>Windows – system setup, hardware/software troubleshooting</li>
+      <li>Bash scripting and command-line tools</li>
+    </ul>
+    <h3>Web & Tools</h3>
+    <ul>
+      <li>HTML, CSS, basic JavaScript</li>
+      <li>Web development fundamentals</li>
+      <li>Docker (basic), NGINX, self-hosted services</li>
+    </ul>
+    <h3>Technical Support & IT Essentials</h3>
+    <ul>
+      <li>PC hardware installation, maintenance, and repair</li>
+      <li>Troubleshooting peripherals, network connections, and OS issues</li>
+      <li>Understanding of system security, malware, and firewalls</li>
+    </ul>
+    <h3>Soft Skills</h3>
+    <ul>
+      <li>Fast learner with hands-on approach</li>
+      <li>Strong troubleshooting and documentation skills</li>
+      <li>Self-motivated and able to work independently</li>
+    </ul>
+  </section>
+
+  <!-- === Education === -->
+  <section class="section-box" id="education">
+    <h2>Education</h2>
+    <h3>Western Governors University</h3>
+    <p><strong>Bachelor of Science in Network Engineering and Security</strong></p>
+    <p>Expected Graduation: May 2026</p>
+    <p>Relevant Coursework: Networking, Linux, Cybersecurity, TCP/IP, Troubleshooting</p>
+
+    <h3>Fairview High School</h3>
+    <p><strong>Advanced Diploma</strong>, Class of 2006</p>
+    <p>Focus: Web Development</p>
+  </section>
+
+  <!-- === Certifications === -->
+  <section class="section-box" id="certifications">
+    <h2>Certifications</h2>
+    <ul>
+      <li>CompTIA IT Fundamentals</li>
+      <li>CompTIA A+</li>
+      <li>Linux Essentials</li>
+    </ul>
+  </section>
+
+  <!-- === Thank You === -->
+  <section class="section-box" style="text-align: center;">
+    <p style="font-size: 1.1rem;">
+      Thank you for reviewing my resume.
+    </p>
+  </section>
+
+  <!-- === Contact === -->
+  <section id="contact" class="section-box">
+    <h2>Contact</h2>
+    <p><strong>Email:</strong> <a href="mailto:ahopki29@wgu.edu">ahopki29@wgu.edu</a></p>
+    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/patience-hopkins-432244329/" target="_blank">linkedin.com/in/patience-hopkins</a></p>
+    <p style="margin-top: 1.5rem;">
+      <a href="#top" class="nav-button">↑ Back to Top</a>
+    </p>
+  </section>
+
+  <!-- === JavaScript === -->
+  <script>
+    window.onload = function () {
+      const toggle = document.getElementById("darkModeToggle");
+      const label = document.getElementById("modeLabel");
+      toggle.addEventListener("change", () => {
+        document.body.classList.toggle("dark-mode");
+        label.textContent = toggle.checked ? "🌙 Dark Mode" : "🌞 Light Mode";
+      });
+    };
+  </script>
+
+</body>
+</html>
