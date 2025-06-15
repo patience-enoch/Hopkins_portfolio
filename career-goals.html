@@ -258,6 +258,19 @@
     .dark-mode .professional-footer {
       background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
     }
+
+mark {
+  background-color: #cce5ff; /* Light blue */
+  color: #004085; /* Dark blue text for contrast */
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+.dark-mode mark {
+  background-color: #004085; /* Darker blue for dark mode */
+  color: #cce5ff; /* Light blue text for contrast in dark mode */
+}
+    
   </style>
 </head>
 <body>
@@ -296,13 +309,13 @@
   </section>
 
   <!-- === Thank You Box === -->
-  <section class="section-box" style="text-align: center;">
-    <p style="font-size: 1.1rem;">
-      Thank you for reviewing my career goals. I appreciate your time and interest in my journey.
-    </p>
-  </section>
+<section class="section-box" style="text-align: center;">
+  <p style="font-size: 1.1rem;">
+    <mark>Thank you for reviewing my career goals.</mark> I appreciate your time and interest in my journey.
+  </p>
+</section>
 
-  <!-- === Chill Sound Toggle Button === -->
+ <!-- === Chill Sound Toggle Button === -->
   <p style="text-align: center; margin-top: 2rem;">
     <button id="natureBtn" onclick="toggleNatureSound()" style="
       padding: 8px 16px;
