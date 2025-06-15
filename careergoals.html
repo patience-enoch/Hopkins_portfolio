@@ -1,0 +1,250 @@
+
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Career Goals</title>
+  <link rel="stylesheet" href="css/styles.css">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f9fc;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    .dark-mode {
+      background-color: #121212;
+      color: #f0f0f0;
+    }
+
+    header {
+      text-align: center;
+      background-color: #2c3e50;
+      color: #fff;
+      padding: 2rem 1rem;
+    }
+
+    .section-box {
+      max-width: 800px;
+      background-color: #fff;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    .dark-mode .section-box {
+      background-color: #1e1e1e;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+
+    a {
+      color: #2c3e50;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .dark-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      z-index: 1000;
+    }
+
+    .slider {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 28px;
+      background-color: #ccc;
+      border-radius: 34px;
+      cursor: pointer;
+      transition: background-color 0.4s;
+    }
+
+    .slider:before {
+      content: "";
+      position: absolute;
+      height: 20px;
+      width: 20px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      border-radius: 50%;
+      transition: transform 0.4s;
+    }
+
+    input[type="checkbox"] {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    input:checked + .slider {
+      background-color: #4a90e2;
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(22px);
+    }
+
+    .video-wrapper {
+      max-width: 480px;
+      margin: 0 auto;
+      padding-bottom: 20px;
+    }
+
+    .dark-mode footer {
+      background-color: #1e1e1e;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- === Navigation === -->
+  <nav>
+    <ul style="list-style: none; padding: 0; margin: 0; background-color: #34495e; text-align: center;">
+      <li style="display: inline-block; margin: 0 10px;">
+        <a href="index.html" style="color: #fff; text-decoration: none; padding: 10px 15px; display: block;">Home</a>
+      </li>
+      <li style="display: inline-block; margin: 0 10px;">
+        <a href="coverletter.html" style="color: #fff; text-decoration: none; padding: 10px 15px; display: block;">Cover Letter</a>
+      </li>
+      <li style="display: inline-block; margin: 0 10px;">
+        <a href="career-goals.html" style="color: #fff; text-decoration: none; padding: 10px 15px; display: block;">Career Goals</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- === Dark Mode Toggle === -->
+  <label class="dark-toggle">
+    <input type="checkbox" id="darkModeToggle">
+    <span class="slider round"></span>
+    <span id="modeLabel">🌞 Light Mode</span>
+  </label>
+
+  <!-- === Header Section === -->
+  <header>
+    <h1>Career Goals</h1>
+  </header>
+
+  <!-- === Main Content === -->
+  <main>
+    <!-- === Career Goals Content Section === -->
+    <article class="section-box">
+      <p>
+        My career goal is to work in cloud infrastructure or network security in a remote role. As an autistic professional, I thrive in
+        structured, focused environments and find that working from home allows me to do my best work. I'm currently building a <strong>strong foundation</strong>
+        in <em>Linux, networking, and cybersecurity</em>, with the long-term goal of becoming a <mark>cloud systems engineer</mark> or remote IT support specialist.
+      </p>
+
+      <h3>Roles I'm Actively Preparing For:</h3>
+      <ul>
+        <li>Cloud Systems Administrator (AWS, Azure, etc.)</li>
+        <li>Cybersecurity Analyst (remote-friendly)</li>
+        <li>Remote IT Support / Tech Support Engineer</li>
+        <li>Linux System Administrator</li>
+        <li>Cloud Security Specialist</li>
+      </ul>
+
+      <hr style="margin: 20px 0; border: 1px solid #ddd;">
+    </article>
+
+    <!-- === Contact Form Section === -->
+    <section class="section-box">
+      <form style="max-width: 600px;">
+        <p>
+          <input type="text" id="contact-name" name="contact-name" style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;">
+        </p>
+        
+        <p>
+          <input type="email" id="contact-email" name="contact-email" style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;">
+        </p>
+
+        <p>
+          <textarea id="message" name="message" rows="4" style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px; resize: vertical;"></textarea>
+        </p>
+
+        <p>
+          <input type="radio" id="am" name="contact-time" value="am">
+          <input type="radio" id="pm" name="contact-time" value="pm">
+          <input type="radio" id="anytime" name="contact-time" value="anytime" checked>
+        </p>
+
+        <p>
+          <select id="industry" name="industry" style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;">
+            <option value="technology">Technology</option>
+            <option value="education">Education</option>
+            <option value="government">Government</option>
+          </select>
+        </p>
+      </form>
+    </section>
+
+    <!-- === Thank You Box === -->
+    <section class="section-box" style="text-align: center;">
+      <p style="font-size: 1.1rem;">
+        Thank you for reviewing my career goals. I appreciate your time and interest in my journey.
+      </p>
+    </section>
+
+    <!-- === Nature Sound Toggle Button === -->
+    <p style="text-align: center; margin-top: 2rem;">
+      <button id="natureBtn" onclick="toggleNatureSound()" style="
+        padding: 8px 16px;
+        background-color: #3498db;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: bold;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      ">
+        🌿 Play Nature Sound
+      </button>
+    </p>
+
+    <audio id="natureAudio" preload="auto">
+      <source src="media/lazyday.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- === WGU Logo (Natural Size, Centered) === -->
+    <div style="text-align: center; margin: 2rem 0;">
+      <img src="images/nightowl.jpeg" alt="WGU Logo" style="border-radius: 10px;" />
+    </div>
+
+    <!-- === Snoopy Dancing Video (Scaled & Centered) === -->
+    <div class="video-wrapper" style="text-align:center;">
+      <h3>Here's a little joy boost for your day!</h3>
+      <iframe width="100%" height="270" src="https://www.youtube.com/embed/l4_VMcxoxrk"
+        title="Snoopy Happy Dance" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </main>
+
+  <!-- === Credits === -->
+  <footer style="margin-top: 50px; padding: 20px; background-color: #f0f4f8; border-top: 2px solid #ccc; font-size: 0.95em; color: #333; text-align: center; font-family: Arial, sans-serif;">
+    <h4 style="margin-bottom: 10px; color: #2a2a2a;">Credits & Attributions</h4>
+    <ul style="list-style-type: none; padding: 0; margin: 0;">
+      <li style="margin-bottom: 8px;">WGU owl logo © Western Governors University. Used for academic purposes.</li>
+      <li style="margin-bottom: 8px;">Snoopy video © Peanuts Worldwide LLC. Used under fair use for educational purposes.</li>
+      <li style="margin-bottom: 8px;">Nature audio from <a href="https://freesound.org"
