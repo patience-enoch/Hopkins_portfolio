@@ -289,35 +289,36 @@
     <a href="index.html">← Back to Home</a>
   </section>
 
-  <!-- === Scripts === -->
   <script>
-    function toggleNatureSound() {
-      const audio = document.getElementById("natureAudio");
-      const button = document.getElementById("natureBtn");
-      if (audio.paused) {
-        audio.play();
-        button.innerText = "🔇 Pause chill sounds";
-      } else {
-        audio.pause();
-        button.innerText = "🌿 Play chill sounds";
-      }
+  function handleSubmit(e) {
+    e.preventDefault();
+    alert("Thank you! Your message was received.");
+  }
+
+  function toggleNatureSound() {
+    const audio = document.getElementById("natureAudio");
+    const button = document.getElementById("natureBtn");
+    if (audio.paused) {
+      audio.play();
+      button.innerText = "🔇 Pause chill sounds";
+    } else {
+      audio.pause();
+      button.innerText = "🌿 Play chill sounds";
     }
+  }
 
-    console.log('Career goals page loaded successfully');
+  console.log('Career goals page loaded successfully');
 
-    window.onload = function () {
-      const toggle = document.getElementById("darkModeToggle");
-      const label = document.getElementById("modeLabel");
-      toggle.addEventListener("change", () => {
-        document.body.classList.toggle("dark-mode");
-        label.textContent = toggle.checked ? "🌙 Dark Mode" : "🌞 Light Mode";
-      });
-    };
-function handleSubmit(e) {
-  e.preventDefault();
-  alert("Thank you! Your message was received.");
-}
+  window.onload = function () {
+    const toggle = document.getElementById("darkModeToggle");
+    const label = document.getElementById("modeLabel");
+    toggle.addEventListener("change", () => {
+      document.body.classList.toggle("dark-mode");
+      label.textContent = toggle.checked ? "🌙 Dark Mode" : "🌞 Light Mode";
+    });
+  };
 </script>
+
 
 </body>
 </html>
