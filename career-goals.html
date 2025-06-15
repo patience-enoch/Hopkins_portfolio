@@ -150,7 +150,7 @@
 </head>
 <body>
 
-  <!-- === Hidden Nav (WGU Required) === -->
+  <!-- === Hidden Nav === -->
   <nav style="display: none;">
     <a href="index.html">Home</a>
     <a href="coverletter.html">Cover Letter</a>
@@ -169,7 +169,6 @@
     <h1>Career Goals</h1>
   </header>
 
-  <!-- === Main Content === -->
   <main>
     <!-- === Career Goals Content Section === -->
     <article class="section-box">
@@ -192,47 +191,47 @@
     </article>
 
     <!-- === Contact Form Section === -->
-    <section class="section-box">
-      <form style="max-width: 600px;" action="#">
-        <p>
-          <input type="text" id="contact-name" name="contact-name" placeholder="Your Name" style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;">
-        </p>
-        
-        <p>
-          <input type="email" id="contact-email" name="contact-email" placeholder="Your Email" style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;">
-        </p>
+<section class="section-box">
+  <form style="max-width: 600px;" action="#" onsubmit="handleSubmit(event)">
+    <p>
+      <input type="text" id="contact-name" name="contact-name" placeholder="Your Name" style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;">
+    </p>
+    
+    <p>
+      <input type="email" id="contact-email" name="contact-email" placeholder="Your Email" style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;">
+    </p>
 
-        <p>
-          <textarea id="message" name="message" rows="4" placeholder="Your Message" style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px; resize: vertical;"></textarea>
-        </p>
+    <p>
+      <textarea id="message" name="message" rows="4" placeholder="Your Message" style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px; resize: vertical;"></textarea>
+    </p>
 
-        <p>
-          <input type="radio" id="am" name="contact-time" value="am">
-          <label for="am">AM</label>
-          <input type="radio" id="pm" name="contact-time" value="pm">
-          <label for="pm">PM</label>
-          <input type="radio" id="anytime" name="contact-time" value="anytime" checked>
-          <label for="anytime">Anytime</label>
-        </p>
+    <p>
+      <input type="radio" id="am" name="contact-time" value="am">
+      <label for="am">AM</label>
+      <input type="radio" id="pm" name="contact-time" value="pm">
+      <label for="pm">PM</label>
+      <input type="radio" id="anytime" name="contact-time" value="anytime" checked>
+      <label for="anytime">Anytime</label>
+    </p>
 
-        <p>
-          <select id="industry" name="industry" required style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;">
-            <option value="">Select Industry</option>
-            <option value="technology">Technology</option>
-            <option value="education">Education</option>
-            <option value="government">Government</option>
-            <option value="healthcare">Healthcare</option>
-            <option value="finance">Finance</option>
-          </select>
-        </p>
+    <p>
+      <select id="industry" name="industry" required style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;">
+        <option value="">Select Industry</option>
+        <option value="technology">Technology</option>
+        <option value="education">Education</option>
+        <option value="government">Government</option>
+        <option value="healthcare">Healthcare</option>
+        <option value="finance">Finance</option>
+      </select>
+    </p>
 
-        <p style="text-align: center;">
-          <button type="submit" style="padding: 10px 20px; background-color: #2c3e50; color: white; border: none; border-radius: 5px;">Submit</button>
-        </p>
-      </form>
-    </section>
-
-    <!-- === Thank You Box === -->
+    <p style="text-align: center;">
+      <button type="submit" style="padding: 10px 20px; background-color: #2c3e50; color: white; border: none; border-radius: 5px;">Submit</button>
+    </p>
+  </form>
+</section>
+  
+   <!-- === Thank You Box === -->
     <section class="section-box" style="text-align: center;">
       <p style="font-size: 1.1rem;">
         Thank you for reviewing my career goals. I appreciate your time and interest in my journey.
@@ -314,7 +313,11 @@
         label.textContent = toggle.checked ? "🌙 Dark Mode" : "🌞 Light Mode";
       });
     };
-  </script>
+function handleSubmit(e) {
+  e.preventDefault();
+  alert("Thank you! Your message was received.");
+}
+</script>
 
 </body>
 </html>
