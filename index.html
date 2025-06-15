@@ -166,6 +166,292 @@
       margin: 0;
       letter-spacing: 0.2px;
     }
+/* Beautiful Contact Form Styling */
+.beautiful-form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+  width: 100%;
+  padding: 1rem 0.75rem 0.5rem;
+  border: 2px solid #e1e8ed;
+  border-radius: 10px;
+  background: #ffffff;
+  font-size: 1rem;
+  color: #2c3e50;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+  outline: none;
+  border-color: #3498db;
+  background: #f8fafb;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(52, 152, 219, 0.15);
+}
+
+.input-group label {
+  position: absolute;
+  top: 1rem;
+  left: 0.75rem;
+  font-size: 1rem;
+  color: #7f8c8d;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  background: transparent;
+  font-weight: 500;
+}
+
+.input-group input:focus + label,
+.input-group input:valid + label,
+.input-group select:focus + label,
+.input-group select:valid + label,
+.input-group textarea:focus + label,
+.input-group textarea:valid + label {
+  top: -0.5rem;
+  left: 0.5rem;
+  font-size: 0.8rem;
+  color: #3498db;
+  background: #ffffff;
+  padding: 0 0.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.focus-border {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #3498db, #2c3e50);
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+.input-group input:focus ~ .focus-border,
+.input-group select:focus ~ .focus-border,
+.input-group textarea:focus ~ .focus-border {
+  width: 100%;
+  left: 0;
+}
+
+.input-group select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5"><path fill="%237f8c8d" d="M2 0L0 2h4zm0 5L0 3h4z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 12px;
+}
+
+.input-group textarea {
+  resize: vertical;
+  min-height: 100px;
+  font-family: inherit;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.submit-button:hover {
+  background: linear-gradient(135deg, #34495e 0%, #2980b9 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(52, 152, 219, 0.4);
+}
+
+.submit-button:active {
+  transform: translateY(-1px);
+}
+
+.submit-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.submit-button:hover::before {
+  left: 100%;
+}
+
+.button-icon {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.submit-button:hover .button-icon {
+  transform: translateX(5px);
+}
+
+.success-message {
+  display: none;
+  text-align: center;
+  padding: 3rem 2rem;
+  max-width: 400px;
+  margin: 0 auto;
+  animation: slideIn 0.6s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.success-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #27ae60, #2ecc71);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  color: white;
+  animation: bounceIn 0.8s ease-out;
+}
+
+@keyframes bounceIn {
+  0% { transform: scale(0); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.success-icon svg {
+  width: 40px;
+  height: 40px;
+}
+
+.success-message h3 {
+  color: #2c3e50;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.success-message p {
+  color: #7f8c8d;
+  font-size: 1rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Dark Mode Support */
+.dark-mode .input-group input,
+.dark-mode .input-group select,
+.dark-mode .input-group textarea {
+  background: #2a2a2a;
+  border-color: #444;
+  color: #f0f0f0;
+}
+
+.dark-mode .input-group input:focus,
+.dark-mode .input-group select:focus,
+.dark-mode .input-group textarea:focus {
+  background: #333;
+  border-color: #4a90e2;
+}
+
+.dark-mode .input-group label {
+  color: #bbb;
+}
+
+.dark-mode .input-group input:focus + label,
+.dark-mode .input-group input:valid + label,
+.dark-mode .input-group select:focus + label,
+.dark-mode .input-group select:valid + label,
+.dark-mode .input-group textarea:focus + label,
+.dark-mode .input-group textarea:valid + label {
+  color: #4a90e2;
+  background: #2a2a2a;
+}
+
+.dark-mode .success-message h3 {
+  color: #f0f0f0;
+}
+
+.dark-mode .success-message p {
+  color: #ccc;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .input-group {
+    margin-bottom: 1rem;
+  }
+  
+  .submit-button {
+    font-size: 1rem;
+    padding: 0.9rem 1.5rem;
+  }
+  
+  .success-message {
+    padding: 2rem 1rem;
+  }
+  
+  .success-icon {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .success-icon svg {
+    width: 30px
+    
   </style>
 </head>
 <body id="top">
@@ -285,49 +571,77 @@
         </tr>
       </table>
     </article>
-
-    
-    <!-- === Contact Form === -->
-    <section class="section-box" id="contact-form">
-      <h2 style="text-align: center;">Contact Me</h2>
-      <form id="resumeContactForm" class="contact-form">
-        <div class="form-group">
+<!-- === Beautiful Contact Form === -->
+<section class="section-box" id="contact-form">
+  <h2>Contact Me</h2>
+  <div id="formWrapper">
+    <form id="contactForm" onsubmit="submitForm(event)" class="beautiful-form">
+      <div class="form-grid">
+        <div class="input-group">
+          <input type="text" name="name" id="name" required>
           <label for="name">Name</label>
-          <input type="text" id="name" name="name" required />
+          <span class="focus-border"></span>
         </div>
-        <div class="form-group">
+        
+        <div class="input-group">
+          <input type="email" name="email" id="email" required>
           <label for="email">Email</label>
-          <input type="email" id="email" name="email" required />
+          <span class="focus-border"></span>
         </div>
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
-        </div>
-        <div class="form-group">
-          <label>Best time to contact:</label>
-          <div class="radio-group">
-            <label><input type="radio" name="contact_time" value="am" /> AM</label>
-            <label><input type="radio" name="contact_time" value="pm" /> PM</label>
-            <label><input type="radio" name="contact_time" value="anytime" checked /> Anytime</label>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="contact_reason">Position Hiring For:</label>
-          <select id="contact_reason" name="contact_reason">
-            <option value="resume">Network Technician</option>
-            <option value="networking">IT Support Specialist</option>
-            <option value="opportunity">Security Analyst</option>
-            <option value="feedback">Other</option>
-          </select>
-        </div>
-        <div style="text-align: center;">
-          <button type="submit" class="nav-button">Send Message</button>
-        </div>
-        <p id="thankYouMsg" style="display:none; color: green; margin-top: 15px; font-weight: bold; text-align: center;">Thank you for your message!</p>
-      </form>
-    </section>
+      </div>
+      
+      <div class="input-group">
+        <select name="position" id="position" required>
+          <option value="" disabled selected hidden></option>
+          <option value="network-tech">Network Technician</option>
+          <option value="it-support">IT Support Specialist</option>
+          <option value="security-analyst">Security Analyst</option>
+          <option value="cloud-engineer">Cloud Engineer</option>
+          <option value="other">Other Opportunity</option>
+        </select>
+        <label for="position">Position of Interest</label>
+        <span class="focus-border"></span>
+      </div>
+      
+      <div class="input-group">
+        <textarea name="message" id="message" rows="3" required></textarea>
+        <label for="message">Tell me about the opportunity</label>
+        <span class="focus-border"></span>
+      </div>
+      
+      <button type="submit" class="submit-button">
+        <span class="button-text">Send Message</span>
+        <span class="button-icon">→</span>
+      </button>
+    </form>
+  </div>
+  
+  <div id="thankYouMessage" class="success-message">
+    <div class="success-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+        <polyline points="20,6 9,17 4,12"></polyline>
+      </svg>
+    </div>
+    <h3>Message Sent!</h3>
+    <p>Thank you for reaching out. I'll get back to you within 24 hours.</p>
+  </div>
+</section>
 
-    <!-- === Thank You === -->
+<style>
+<!-- === Contact Form === -->
+<section class="section-box" id="contact-form">
+  <h2>Contact Me</h2>
+  <div id="formWrapper">
+    <form id="contactForm" onsubmit="submitForm(event)" class="beautiful-form">
+      <!-- ... the form content ... -->
+    </form>
+  </div>
+  <div id="thankYouMessage" class="success-message">
+    <!-- ... success message ... -->
+  </div>
+</section>
+    
+     <!-- === Thank You === -->
     <section class="section-box" style="text-align: center;">
       <p style="font-size: 1.1rem;">
         Thank you for reviewing my resume.
@@ -392,6 +706,50 @@
       // Console log for JavaScript requirement
       console.log("Resume page loaded successfully on " + currentDate);
     };
+function submitForm(event) {
+  event.preventDefault();
+  
+  const form = document.getElementById('contactForm');
+  const wrapper = document.getElementById('formWrapper');
+  const successMessage = document.getElementById('thankYouMessage');
+  const submitButton = form.querySelector('.submit-button');
+  
+  // Add loading state
+  submitButton.innerHTML = '<span class="button-text">Sending...</span>';
+  submitButton.style.pointerEvents = 'none';
+  
+  // Simulate form submission delay
+  setTimeout(() => {
+    wrapper.style.display = 'none';
+    successMessage.style.display = 'block';
+  }, 1200);
+}
+
+// Enhanced form validation and interactions
+document.addEventListener('DOMContentLoaded', function() {
+  const inputs = document.querySelectorAll('.beautiful-form input, .beautiful-form select, .beautiful-form textarea');
+  
+  inputs.forEach(input => {
+    // Add floating label effect
+    input.addEventListener('blur', function() {
+      if (this.value) {
+        this.classList.add('has-value');
+      } else {
+        this.classList.remove('has-value');
+      }
+    });
+    
+    // Add focus effects
+    input.addEventListener('focus', function() {
+      this.parentElement.classList.add('focused');
+    });
+    
+    input.addEventListener('blur', function() {
+      this.parentElement.classList.remove('focused');
+    });
+  });
+});
+  
   </script>
 
 </body>
