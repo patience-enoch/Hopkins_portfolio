@@ -3,53 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Career Goals</title>
+  <title>Cover Letter</title>
   <link rel="stylesheet" href="css/styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
   <style>
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      font-weight: 400;
-      line-height: 1.6;
       background-color: #f7f9fc;
       color: #333;
       margin: 0;
       padding: 0;
+      line-height: 1.6;
     }
-
-    .dark-mode {
-      background-color: #121212;
-      color: #f0f0f0;
-    }
-
     header {
       text-align: center;
       background-color: #2c3e50;
       color: #fff;
       padding: 2rem 1rem;
     }
-
-    h1 {
-      font-weight: 600;
-      font-size: 2.2rem;
-    }
-
-    h2 {
-      font-weight: 600;
-      font-size: 1.8rem;
-      margin-bottom: 1.2rem;
-    }
-
-    h3 {
-      font-weight: 500;
-      font-size: 1.3rem;
-      margin-bottom: 0.8rem;
-      margin-top: 0;
-    }
-
     .section-box {
       max-width: 800px;
       background-color: #fff;
@@ -58,37 +31,13 @@
       border-radius: 15px;
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
     }
-
-    .dark-mode .section-box {
-      background-color: #1e1e1e;
-    }
-
-    ul {
-      padding-left: 1.5rem;
-      margin-bottom: 1.5rem;
-    }
-
-    li {
-      margin-bottom: 0.6rem;
-      font-size: 1rem;
-    }
-
     p {
       margin-bottom: 1.2rem;
       font-size: 1rem;
-      line-height: 1.7;
     }
-
-    a {
-      color: #2c3e50;
-      text-decoration: none;
-      font-weight: bold;
+    mark {
+      background-color: yellow;
     }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
     .dark-toggle {
       position: fixed;
       top: 20px;
@@ -98,7 +47,6 @@
       gap: 10px;
       z-index: 1000;
     }
-
     .slider {
       position: relative;
       display: inline-block;
@@ -109,7 +57,6 @@
       cursor: pointer;
       transition: background-color 0.4s;
     }
-
     .slider:before {
       content: "";
       position: absolute;
@@ -121,30 +68,29 @@
       border-radius: 50%;
       transition: transform 0.4s;
     }
-
     input[type="checkbox"] {
       opacity: 0;
       width: 0;
       height: 0;
     }
-
     input:checked + .slider {
       background-color: #4a90e2;
     }
-
     input:checked + .slider:before {
       transform: translateX(22px);
     }
-
-    .video-wrapper {
-      max-width: 480px;
-      margin: 0 auto;
-      padding-bottom: 20px;
+    .dark-mode {
+      background-color: #121212;
+      color: #f0f0f0;
     }
-
-    .dark-mode footer {
+    .dark-mode .section-box {
       background-color: #1e1e1e;
-      color: #ccc;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #f0f4f8;
+      border-top: 2px solid #ccc;
     }
   </style>
 </head>
@@ -157,169 +103,51 @@
     <span id="modeLabel">🌞 Light Mode</span>
   </label>
 
-  <!-- === Header Section === -->
+  <!-- === Header === -->
   <header>
-    <h1>Career Goals</h1>
+    <h1>Cover Letter</h1>
   </header>
 
-  <!-- === Navigation Bar === -->
-<nav style="text-align: center; padding: 10px; background-color: #e0e6ed;">
-  <a href="index.html" style="margin: 0 15px;">Home</a>
-  <a href="coverletter.html" style="margin: 0 15px;">Cover Letter</a>
-  <a href="career-goals.html" style="margin: 0 15px;">Career Goals</a>
-</nav>
+  <!-- === Cover Letter Content === -->
+  <section class="section-box">
+    <p>To the keepers of opportunity,</p>
 
+    <p>I am writing to express my enthusiasm for a remote placement in network security or cloud administration. As an autistic professional, I thrive in focused environments and bring a <strong>high level of detail, persistence, and integrity</strong> to everything I do. I am currently earning a degree in network engineering and security while building hands-on experience in <em>Linux, cybersecurity, and cloud technologies</em>.</p>
 
-  <main>
-    <!-- === Career Goals Content Section === -->
-    <article class="section-box">
-      <p>
-        My career goal is to work in cloud infrastructure or network security in a remote role. As an autistic professional, I thrive in
-        structured, focused environments and find that working from home allows me to do my best work. I'm currently building a <strong>strong foundation</strong>
-        in <em>Linux, networking, and cybersecurity</em>, with the long-term goal of becoming a <mark>cloud systems engineer</mark> or remote IT support specialist.
-      </p>
+    <p>My background in self-learning, IT troubleshooting, and server management has given me the confidence and resilience to take on technical challenges. I especially enjoy setting up virtual machines, self-hosting cloud tools, and solving <mark>real-world problems</mark>. I am excited about joining a team that values continuous learning, creative thinking, and interesting learning curves.</p>
 
-      <h3>Roles I'm Actively Preparing For:</h3>
-      <ul>
-        <li>Cloud Systems Administrator (AWS, Azure, etc.)</li>
-        <li>Cybersecurity Analyst</li>
-        <li>Remote IT Support / Tech Support Engineer</li>
-        <li>Linux System Administrator</li>
-        <li>Cloud Security Specialist</li>
-      </ul>
+    <p>Thank you.</p>
 
-      <hr style="margin: 20px 0; border: 1px solid #ddd;">
-    </article>
-
-    <!-- === Contact Form Section === -->
-<section class="section-box">
-  <form style="max-width: 600px;" action="#" onsubmit="handleSubmit(event)">
-    <p>
-      <input type="text" id="contact-name" name="contact-name" placeholder="Your Name" style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;">
-    </p>
-    
-    <p>
-      <input type="email" id="contact-email" name="contact-email" placeholder="Your Email" style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;">
-    </p>
-
-    <p>
-      <textarea id="message" name="message" rows="4" placeholder="Your Message" style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px; resize: vertical;"></textarea>
-    </p>
-
-    <p>
-      <input type="radio" id="am" name="contact-time" value="am">
-      <label for="am">AM</label>
-      <input type="radio" id="pm" name="contact-time" value="pm">
-      <label for="pm">PM</label>
-      <input type="radio" id="anytime" name="contact-time" value="anytime" checked>
-      <label for="anytime">Anytime</label>
-    </p>
-
-    <p>
-      <select id="industry" name="industry" required style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;">
-        <option value="">Select Industry</option>
-        <option value="technology">Technology</option>
-        <option value="education">Education</option>
-        <option value="government">Government</option>
-        <option value="healthcare">Healthcare</option>
-        <option value="finance">Finance</option>
-      </select>
-    </p>
-
-    <p style="text-align: center;">
-      <button type="submit" style="padding: 10px 20px; background-color: #2c3e50; color: white; border: none; border-radius: 5px;">Submit</button>
-    </p>
-  </form>
-</section>
-  
-   <!-- === Thank You Box === -->
-    <section class="section-box" style="text-align: center;">
-      <p style="font-size: 1.1rem;">
-        Thank you for reviewing my career goals. I appreciate your time and interest in my journey.
-      </p>
-    </section>
-
-    <!-- === Nature Sound Toggle Button === -->
-    <p style="text-align: center; margin-top: 2rem;">
-      <button id="natureBtn" onclick="toggleNatureSound()" style="
-        padding: 8px 16px;
-        background-color: #3498db;
-        color: #fff;
-        border: none;
-        border-radius: 6px;
-        cursor: pointer;
-        font-weight: bold;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-      ">
-        🌿 Play chill sounds
-      </button>
-    </p>
-
-    <audio id="natureAudio" preload="auto">
-      <source src="media/lazyday.mp3" type="audio/mpeg">
-    </audio>
-
-    <!-- === WGU Logo (Natural Size, Centered) === -->
-    <div style="text-align: center; margin: 2rem 0;">
-      <img src="images/nightowl.jpeg" alt="WGU Logo" style="border-radius: 10px;" />
-    </div>
-
-    <!-- === Snoopy Dancing Video (Scaled & Centered) === -->
-    <div class="video-wrapper" style="text-align:center;">
-      <h3>Here's a little joy boost for your day!</h3>
-      <iframe width="100%" height="270" src="https://www.youtube.com/embed/l4_VMcxoxrk"
-        title="Snoopy Happy Dance" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
-      </iframe>
-    </div>
-  </main>
-
-  <!-- === Credits === -->
-  <footer style="margin-top: 50px; padding: 20px; background-color: #f0f4f8; border-top: 2px solid #ccc; font-size: 0.95em; color: #333; text-align: center; font-family: 'Inter', sans-serif;">
-    <h4 style="margin-bottom: 10px; color: #2a2a2a;">Credits & Attributions</h4>
-    <ul style="list-style-type: none; padding: 0; margin: 0;">
-      <li style="margin-bottom: 8px;">WGU owl logo © Western Governors University. Used for academic purposes.</li>
-      <li style="margin-bottom: 8px;">Snoopy video © Peanuts Worldwide LLC. Used under fair use for educational purposes.</li>
-      <li style="margin-bottom: 8px;">Nature audio from <a href="https://freesound.org" target="_blank" style="color: #0056b3; text-decoration: none;">Freesound.org</a>.</li>
-    </ul>
-  </footer>
-
-  <!-- === Back to Home Link === -->
-  <section class="section-box" style="text-align: center;">
-    <a href="index.html">← Back to Home</a>
+    <p>Sincerely,</p>
+    <p><strong>Ashley Hopkins</strong></p>
   </section>
 
+  <!-- ✅ KEEP THIS: Button-style nav at bottom -->
+  <section class="section-box" style="text-align: center;">
+    <a href="index.html" style="display: inline-block; padding: 10px 20px; margin: 10px; background-color: #2c3e50; color: white; border-radius: 6px; text-decoration: none;">
+      ← Back to Home
+    </a>
+    <a href="career-goals.html" style="display: inline-block; padding: 10px 20px; margin: 10px; background-color: #2c3e50; color: white; border-radius: 6px; text-decoration: none;">
+      → Career Goals
+    </a>
+  </section>
+
+  <!-- === Footer === -->
+  <footer>
+    <p>© 2025 Ashley Hopkins - Professional Documents</p>
+  </footer>
+
+  <!-- === Script === -->
   <script>
-  function handleSubmit(e) {
-    e.preventDefault();
-    alert("Thank you! Your message was received.");
-  }
-
-  function toggleNatureSound() {
-    const audio = document.getElementById("natureAudio");
-    const button = document.getElementById("natureBtn");
-    if (audio.paused) {
-      audio.play();
-      button.innerText = "🔇 Pause chill sounds";
-    } else {
-      audio.pause();
-      button.innerText = "🌿 Play chill sounds";
-    }
-  }
-
-  console.log('Career goals page loaded successfully');
-
-  window.onload = function () {
-    const toggle = document.getElementById("darkModeToggle");
-    const label = document.getElementById("modeLabel");
-    toggle.addEventListener("change", () => {
-      document.body.classList.toggle("dark-mode");
-      label.textContent = toggle.checked ? "🌙 Dark Mode" : "🌞 Light Mode";
-    });
-  };
-</script>
-
+    window.onload = function () {
+      const toggle = document.getElementById("darkModeToggle");
+      const label = document.getElementById("modeLabel");
+      toggle.addEventListener("change", () => {
+        document.body.classList.toggle("dark-mode");
+        label.textContent = toggle.checked ? "🌙 Dark Mode" : "🌞 Light Mode";
+      });
+    };
+  </script>
 
 </body>
 </html>
