@@ -1,44 +1,79 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Cover Letter</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Career Goals</title>
   <link rel="stylesheet" href="css/styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      background-color: #f7f9fc;
-      color: #333;
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #f0f4f8;
+      color: #222;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-weight: 400;
       line-height: 1.6;
     }
+    .dark-mode {
+      background-color: #121212;
+      color: #f0f0f0;
+    }
     header {
-      text-align: center;
       background-color: #2c3e50;
       color: #fff;
-      padding: 2rem 1rem;
+      padding: 30px 20px;
+      text-align: center;
     }
     .section-box {
-      max-width: 800px;
       background-color: #fff;
-      margin: 2rem auto;
-      padding: 2rem;
-      border-radius: 15px;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
+      padding: 25px;
+      margin: 25px auto;
+      max-width: 900px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    }
+    .dark-mode .section-box {
+      background-color: #1e1e1e;
+    }
+    h2 {
+      font-weight: 600;
+      font-size: 1.8rem;
+      margin-bottom: 1.2rem;
+    }
+    h3 {
+      font-weight: 500;
+      font-size: 1.3rem;
+      margin-bottom: 0.8rem;
+      margin-top: 0;
     }
     p {
-      margin-bottom: 1.2rem;
-      font-size: 1rem;
+      margin-bottom: 1rem;
     }
-    mark {
-      background-color: yellow;
+    .nav-button {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 20px;
+      background-color: #2c3e50;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background-color 0.3s;
     }
-    .dark-toggle {
+    .nav-button:hover {
+      background-color: #1a252f;
+    }
+    .dark-mode .nav-button {
+      background-color: #444;
+    }
+    .switch {
       position: fixed;
       top: 20px;
       right: 20px;
@@ -46,6 +81,11 @@
       align-items: center;
       gap: 10px;
       z-index: 1000;
+    }
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
     }
     .slider {
       position: relative;
@@ -68,36 +108,17 @@
       border-radius: 50%;
       transition: transform 0.4s;
     }
-    input[type="checkbox"] {
-      opacity: 0;
-      width: 0;
-      height: 0;
-    }
     input:checked + .slider {
       background-color: #4a90e2;
     }
     input:checked + .slider:before {
       transform: translateX(22px);
     }
-    .dark-mode {
-      background-color: #121212;
-      color: #f0f0f0;
-    }
-    .dark-mode .section-box {
-      background-color: #1e1e1e;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background-color: #f0f4f8;
-      border-top: 2px solid #ccc;
-    }
   </style>
 </head>
-<body>
-
+<body id="top">
   <!-- === Dark Mode Toggle === -->
-  <label class="dark-toggle">
+  <label class="switch">
     <input type="checkbox" id="darkModeToggle">
     <span class="slider round"></span>
     <span id="modeLabel">🌞 Light Mode</span>
@@ -105,49 +126,56 @@
 
   <!-- === Header === -->
   <header>
-    <h1>Cover Letter</h1>
+    <h1>Career Goals</h1>
+    <p>Ashley "Patience" Hopkins</p>
   </header>
 
-  <!-- === Cover Letter Content === -->
-  <section class="section-box">
-    <p>To the keepers of opportunity,</p>
+  <!-- === Main Content === -->
+  <main>
+    <article class="section-box">
+      <h2>My Career Vision</h2>
+      <p>I am pursuing a Bachelor of Science in Network Engineering and Security at WGU. My short-term goal is to earn key certifications like CompTIA Network+ and Cisco CCNA, while continuing to build hands-on experience through my home lab environment.</p>
 
-    <p>I am writing to express my enthusiasm for a remote placement in network security or cloud administration. As an autistic professional, I thrive in focused environments and bring a <strong>high level of detail, persistence, and integrity</strong> to everything I do. I am currently earning a degree in network engineering and security while building hands-on experience in <em>Linux, cybersecurity, and cloud technologies</em>.</p>
+      <p><em>Long-term</em>, I aim to become a skilled Network Security Engineer or Penetration Tester, protecting organizations from cyber threats. My passion lies in solving complex technical problems and contributing to safer, smarter systems.</p>
 
-    <p>My background in self-learning, IT troubleshooting, and server management has given me the confidence and resilience to take on technical challenges. I especially enjoy setting up virtual machines, self-hosting cloud tools, and solving <mark>real-world problems</mark>. I am excited about joining a team that values continuous learning, creative thinking, and interesting learning curves.</p>
+      <p><strong>Autism is not my weakness—it's my clarity.</strong> I bring focus, integrity, and persistence to everything I do. With every command line typed and every protocol understood, I grow more confident in my career choice.</p>
 
-    <p>Thank you.</p>
+      <p><mark>My goal is simple:</mark> master the tech world and make it safer for everyone.</p>
+    </article>
 
-    <p>Sincerely,</p>
-    <p><strong>Ashley Hopkins</strong></p>
-  </section>
+    <hr style="margin: 40px 0; border: 1px solid #ddd;">
 
-  <!-- ✅ KEEP THIS: Button-style nav at bottom -->
-  <section class="section-box" style="text-align: center;">
-    <a href="index.html" style="display: inline-block; padding: 10px 20px; margin: 10px; background-color: #2c3e50; color: white; border-radius: 6px; text-decoration: none;">
-      ← Back to Home
-    </a>
-    <a href="career-goals.html" style="display: inline-block; padding: 10px 20px; margin: 10px; background-color: #2c3e50; color: white; border-radius: 6px; text-decoration: none;">
-      → Career Goals
-    </a>
-  </section>
+    <!-- === Navigation Buttons === -->
+    <section class="section-box" style="text-align: center;">
+      <a href="coverletter.html" class="nav-button">← Back to Cover Letter</a>
+      <a href="index.html" class="nav-button">View Resume →</a>
+    </section>
+  </main>
 
-  <!-- === Footer === -->
-  <footer>
-    <p>© 2025 Ashley Hopkins - Professional Documents</p>
+  <!-- === Footer / Contact === -->
+  <footer id="contact" class="section-box">
+    <h2>Contact</h2>
+    <p><strong>Email:</strong> <a href="mailto:ahopki29@wgu.edu">ahopki29@wgu.edu</a></p>
+    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/patience-hopkins-432244329/" target="_blank">linkedin.com/in/patience-hopkins</a></p>
+    <p style="margin-top: 1.5rem;">
+      <a href="#top" class="nav-button">↑ Back to Top</a>
+    </p>
   </footer>
 
-  <!-- === Script === -->
+  <!-- === JavaScript === -->
   <script>
-    window.onload = function () {
+    const currentDate = new Date();
+    const dateString = currentDate.toLocaleDateString();
+    console.log('Page loaded on: ' + dateString);
+
+    document.addEventListener('DOMContentLoaded', function() {
       const toggle = document.getElementById("darkModeToggle");
       const label = document.getElementById("modeLabel");
       toggle.addEventListener("change", () => {
         document.body.classList.toggle("dark-mode");
         label.textContent = toggle.checked ? "🌙 Dark Mode" : "🌞 Light Mode";
       });
-    };
+    });
   </script>
-
 </body>
 </html>
