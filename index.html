@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>My Resume</title>
   <link rel="stylesheet" href="css/styles.css">
@@ -30,17 +30,6 @@
       color: #fff;
       padding: 30px 20px;
       text-align: center;
-    }
-    nav {
-      background-color: #ddd;
-      text-align: center;
-      padding: 10px 0;
-    }
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #2c3e50;
-      font-weight: bold;
     }
     .section-box {
       background-color: #fff;
@@ -139,13 +128,6 @@
     <span id="modeLabel">🌞 Light Mode</span>
   </label>
 
-  <!-- === Navigation Bar === -->
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="coverletter.html">Cover Letter</a>
-    <a href="career-goals.html">Career Goals</a>
-  </nav>
-
   <!-- === Header === -->
   <header>
     <h1>Ashley "Patience" Hopkins</h1>
@@ -157,7 +139,10 @@
   <main>
     <!-- === Image + Summary === -->
     <article class="section-box" style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 40px;">
-      <img src="images/waterfall-profile.jpeg" width="300" style="border: 3px solid #2c3e50; border-radius: 15px; box-shadow: 0px 4px 20px rgba(0,0,0,0.2);" alt="Ashley sitting at a waterfall">
+      <img src="images/waterfall-profile.jpeg" width="300"
+           style="border: 3px solid #2c3e50; border-radius: 15px; box-shadow: 0px 4px 20px rgba(0,0,0,0.2);"
+           alt="Ashley sitting at a waterfall">
+
       <div style="max-width: 480px;">
         <h2 style="margin-top: 0;">Professional Summary</h2>
         <p>
@@ -175,8 +160,117 @@
       <a href="career-goals.html" class="nav-button">View My Career Goals</a>
     </section>
 
-    <!-- === Technical Skills, Education, Certifications (unchanged content) === -->
-    <!-- (You can keep those sections from your existing resume) -->
+    <!-- === Technical Skills === -->
+    <section class="section-box" id="skills">
+      <h2>Technical Skills</h2>
+
+      <div class="section-box">
+        <h3>Networking</h3>
+        <ul>
+          <li>TCP/IP, DNS, DHCP, NAT, subnetting, VLANs</li>
+          <li>Routing & switching concepts</li>
+          <li>Home lab experience with routers, switches, and firewalls</li>
+          <li>Cisco Packet Tracer and Wireshark</li>
+        </ul>
+      </div>
+
+      <div class="section-box">
+        <h3>Systems Administration</h3>
+        <ul>
+          <li>Linux (Ubuntu-Server, Kali) – file systems, user management, permissions</li>
+          <li>Windows – system setup, hardware/software troubleshooting</li>
+          <li>Bash scripting and command-line tools</li>
+        </ul>
+      </div>
+
+      <div class="section-box">
+        <h3>Web & Tools</h3>
+        <ul>
+          <li>HTML, CSS, basic JavaScript</li>
+          <li>Web development fundamentals</li>
+          <li>Docker (basic), NGINX, self-hosted services</li>
+        </ul>
+      </div>
+
+      <div class="section-box">
+        <h3>Technical Support & IT Essentials</h3>
+        <ul>
+          <li>PC hardware installation, maintenance, and repair</li>
+          <li>Troubleshooting peripherals, network connections, and OS issues</li>
+          <li>Understanding of system security, malware, and firewalls</li>
+        </ul>
+      </div>
+
+      <div class="section-box">
+        <h3>Soft Skills</h3>
+        <ul>
+          <li>Fast learner with hands-on approach</li>
+          <li>Strong troubleshooting and documentation skills</li>
+          <li>Self-motivated and able to work independently</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- === Education === -->
+    <section class="section-box" id="education">
+      <h2>Education</h2>
+      <h3>Western Governors University</h3>
+      <p><strong>Bachelor of Science in Network Engineering and Security</strong></p>
+      <p>Expected Graduation: May 2026</p>
+      <p>Relevant Coursework: Networking, Linux, Cybersecurity, TCP/IP, Troubleshooting</p>
+
+      <h3>Fairview High School</h3>
+      <p><strong>Advanced Diploma</strong>, Class of 2006</p>
+      <p>Focus: Web Development</p>
+    </section>
+
+    <!-- === Certifications === -->
+    <section class="section-box" id="certifications">
+      <h2>Certifications</h2>
+      <ul>
+        <li>CompTIA IT Fundamentals</li>
+        <li>CompTIA A+</li>
+        <li>Linux Essentials</li>
+      </ul>
+    </section>
+
+    <br>
+
+    <!-- === Data Table === -->
+    <section class="section-box">
+      <h2>Skills Summary</h2>
+      <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+        <caption style="margin-bottom: 10px; font-weight: bold;">Technical Skills Overview</caption>
+        <thead>
+          <tr style="background-color: #2c3e50; color: white;">
+            <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Category</th>
+            <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Primary Skills</th>
+            <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Experience Level</th>
+            <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Years</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="border: 1px solid #ddd; padding: 8px;">Networking</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">TCP/IP, Routing, Switching</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">Intermediate</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">2</td>
+          </tr>
+          <tr style="background-color: #f9f9f9;">
+            <td style="border: 1px solid #ddd; padding: 8px;">Linux Admin</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">Ubuntu, System Management</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">Intermediate</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">3</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #ddd; padding: 8px;">Web Development</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">HTML, CSS, JavaScript</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">Beginner</td>
+            <td style="border: 1px solid #ddd; padding: 8px;">1</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
 
     <hr style="margin: 40px 0; border: 1px solid #ddd;">
 
@@ -210,16 +304,14 @@
       if (dateDiv) {
         dateDiv.textContent = dateString;
       }
-    });
 
-    window.onload = function () {
       const toggle = document.getElementById("darkModeToggle");
       const label = document.getElementById("modeLabel");
       toggle.addEventListener("change", () => {
         document.body.classList.toggle("dark-mode");
-        label.textContent = toggle.checked ? "🌙 Dark Mode" : "☀️ Light Mode";
+        label.textContent = toggle.checked ? "🌙 Dark Mode" : "🌞 Light Mode";
       });
-    };
+    });
   </script>
 </body>
 </html>
