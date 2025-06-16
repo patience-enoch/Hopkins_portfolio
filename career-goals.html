@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="css/styles.css">
 
   <style>
-    /* === basic styles === */
+    /* === Basic Styles === */
     * {
       box-sizing: border-box;
     }
@@ -199,31 +199,42 @@
     }
 
     @keyframes flow {
-      0%, 100% { transform: scaleX(1); opacity: 0.5; }
-      50% { transform: scaleX(1.2); opacity: 1; }
+      0%, 100% { 
+        transform: scaleX(1); 
+        opacity: 0.5; 
+      }
+      50% { 
+        transform: scaleX(1.2); 
+        opacity: 1; 
+      }
     }
 
     @media (max-width: 768px) {
       .quote-text {
         font-size: 1.2rem;
       }
+      
       .quote-text::before,
       .quote-text::after {
         font-size: 1.6rem;
       }
+      
       .quote-text::before {
         top: -6px;
         left: -12px;
       }
+      
       .quote-text::after {
         bottom: -20px;
         right: -12px;
       }
+      
       .quote-section {
         padding: 1.2rem 1rem;
       }
     }
 
+    /* === Footer Styles === */
     .professional-footer {
       margin-top: 2rem;
       padding: 1.5rem;
@@ -249,49 +260,41 @@
       background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
     }
 
-    .credits-footer {
-      margin-top: 50px;
-      padding: 20px;
-      background-color: #f0f4f8;
-      border-top: 2px solid #ccc;
-      font-size: 0.95em;
-      color: #333;
-      text-align: center;
-      font-family: Arial, sans-serif;
-    }
+    /* === Highlight Styles === */
+mark {
+  background-color: #cce5ff;
+  color: #004085;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
 
-    .dark-mode .credits-footer {
-      background-color: #1a1a1a;
-      color: #ccc;
-      border-top: 2px solid #444;
-    }
-
-    mark {
-      background-color: #cce5ff;
-      color: #004085;
-      padding: 2px 4px;
-      border-radius: 3px;
-    }
-
-    .dark-mode mark {
-      background-color: #004085;
-      color: #cce5ff;
-    }
+.dark-mode mark {
+  background-color: #004085;
+  color: #cce5ff;
+}
+    
   </style>
 </head>
 <body id="top">
+
+  <!-- === Dark Mode Toggle === -->
   <label class="dark-toggle">
     <input type="checkbox" id="darkModeToggle">
     <span class="slider round"></span>
     <span id="modeLabel">🌞 Light Mode</span>
   </label>
 
+  <!-- === Header === -->
   <header>
     <h1>Career Goals</h1>
   </header>
 
+  <!-- === Career Goals === -->
   <section class="section-box">
-    <p>My career goal is to work in cloud infrastructure or network security in a <em>remote</em> role. As someone who thrives in focused, structured environments, I excel when given space for deep concentration and technical creativity. I'm methodically building a strong foundation in Linux, networking, and cybersecurity, with the clear vision of becoming either a cloud systems engineer or remote IT support specialist.</p>
+    <p>
+     My career goal is to work in cloud infrastructure or network security in a <em>remote</em> role. As someone who thrives in focused, structured environments, I excel when given space for deep concentration and technical creativity. I'm methodically building a strong foundation in Linux, networking, and cybersecurity, with the clear vision of becoming either a cloud systems engineer or remote IT support specialist.
+     </p>
+
     <h3>Roles I'm Actively Preparing For:</h3>
     <ul>
       <li><strong>Cloud Systems Administrator</strong> (AWS, Azure, etc.)</li>
@@ -307,42 +310,84 @@
     <div class="river-accent"></div>
   </section>
 
+  <!-- === Thank You Box === -->
   <section class="section-box" style="text-align: center;">
-    <p style="font-size: 1.1rem;"><mark>Thank you for reviewing my career goals. I appreciate your time and interest in my journey.</mark></p>
+    <p style="font-size: 1.1rem;">
+      <mark>Thank you for reviewing my career goals. I appreciate your time and interest in my journey.</mark>
+    </p>
   </section>
 
+  <!-- === Chill Sound Toggle Button === -->
   <p style="text-align: center; margin-top: 2rem;">
-    <button id="natureBtn" onclick="toggleNatureSound()">🎵 Play Chill Sounds</button>
+    <button id="natureBtn" onclick="toggleNatureSound()" style="
+      padding: 8px 16px;
+      background-color: #498bdb;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    ">
+      🎵 Play Chill Sounds
+    </button>
   </p>
 
-  <audio id="natureAudio">
+  <audio id="natureAudio" preload="auto">
     <source src="media/lazyday.mp3" type="audio/mpeg">
   </audio>
 
+  <!-- === WGU Logo === -->
   <div style="text-align: center; margin: 2rem 0;">
     <img src="images/nightowl.jpeg" alt="WGU Night Owl Logo" style="border-radius: 10px;" />
   </div>
 
+  <!-- === Snoopy Dancing Video === -->
   <div class="video-wrapper" style="text-align:center;">
     <h3>Here's a little joy boost for your day!</h3>
-    <iframe width="100%" height="270" src="https://www.youtube.com/embed/l4_VMcxoxrk" title="Snoopy Happy Dance" frameborder="0" allowfullscreen></iframe>
+    <iframe width="100%" height="270" src="https://www.youtube.com/embed/l4_VMcxoxrk"
+      title="Snoopy Happy Dance" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
   </div>
 
-  <footer class="credits-footer">
-    <h4 style="margin-bottom: 10px; color: inherit;">Credits & Attributions</h4>
+  <!-- === Credits === -->
+  <footer style="margin-top: 50px; padding: 20px; background-color: #f0f4f8; border-top: 2px solid #ccc; font-size: 0.95em; color: #333; text-align: center; font-family: Arial, sans-serif;">
+    <h4 style="margin-bottom: 10px; color: #2a2a2a;">Credits & Attributions</h4>
     <ul style="list-style-type: none; padding: 0; margin: 0;">
       <li style="margin-bottom: 8px;">WGU owl logo © Western Governors University. Used for academic purposes.</li>
       <li style="margin-bottom: 8px;">Snoopy video © Peanuts Worldwide LLC. Used under fair use for educational purposes.</li>
-      <li style="margin-bottom: 8px;">Nature audio from <a href="https://freesound.org" target="_blank" style="color: inherit; text-decoration: underline;">Freesound.org</a>.</li>
+      <li style="margin-bottom: 8px;">Nature audio from <a href="https://freesound.org" target="_blank" style="color: #0056b3; text-decoration: none;">Freesound.org</a>.</li>
     </ul>
   </footer>
 
+  <!-- === Back to Home Link === -->
+  <section class="section-box" style="text-align: center;">
+    <a href="index.html" class="nav-button">← Back to Home</a>
+  </section>
+
+  <!-- === Hidden Nav === -->
+  <nav style="display: none;">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#top">Top</a></li>
+    </ul>
+  </nav>
+  
+  <!-- === Date Display === -->
+  <div style="text-align: center; margin-top: 30px; margin-bottom: 10px;">
+    <div id="currentDate" style="font-style: italic; color: #666;"></div>
+  </div>
+
+  <!-- === Footer === -->
   <footer class="professional-footer">
     <div class="footer-content">
       <p class="copyright">© 2025 Ashley Hopkins | Network Engineering & Security Professional</p>
     </div>
   </footer>
 
+  <!-- === Scripts === -->
   <script>
     function toggleNatureSound() {
       const audio = document.getElementById("natureAudio");
@@ -359,33 +404,49 @@
     window.onload = function () {
       const toggle = document.getElementById("darkModeToggle");
       const label = document.getElementById("modeLabel");
+      
+      // Check if user has a saved preference
       const savedDarkMode = localStorage.getItem('darkMode');
-
-      if (savedDarkMode === 'true' ||
-          (savedDarkMode === null && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      
+      // Apply dark mode based on saved preference or system preference
+      if (savedDarkMode === 'true' || 
+          (savedDarkMode === null && 
+           window.matchMedia && 
+           window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        // Enable dark mode
         document.body.classList.add('dark-mode');
         toggle.checked = true;
-        label.textContent = "🌙 Dark Mode";
+        label.textContent = "🌞 Light Mode";
       } else {
+        // Enable light mode
         document.body.classList.remove('dark-mode');
         toggle.checked = false;
-        label.textContent = "🌞 Light Mode";
+        label.textContent = "🌙 Dark Mode";
       }
-
-      toggle.addEventListener("change", function () {
+      
+      // Add event listener for toggle changes
+      toggle.addEventListener("change", function() {
         if (this.checked) {
+          // Switch to dark mode
           document.body.classList.add('dark-mode');
-          label.textContent = "🌙 Dark Mode";
+          label.textContent = "🌞 Light Mode";
           localStorage.setItem('darkMode', 'true');
         } else {
+          // Switch to light mode
           document.body.classList.remove('dark-mode');
-          label.textContent = "🌞 Light Mode";
+          label.textContent = "🌙 Dark Mode";
           localStorage.setItem('darkMode', 'false');
         }
       });
+      
+      // Display current date
+      const dateElement = document.getElementById("currentDate");
+      const currentDate = new Date();
+      dateElement.textContent = "Last updated: " + currentDate.toLocaleDateString();
+      
+      // Console log 
+      console.log("Career goals page loaded successfully on " + currentDate);
     };
   </script>
 </body>
 </html>
-
-
