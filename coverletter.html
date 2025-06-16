@@ -6,6 +6,7 @@
   <title>Cover Letter</title>
   <link rel="stylesheet" href="css/styles.css" />
   <style>
+    /* basic styles */
     * {
       box-sizing: border-box;
     }
@@ -145,18 +146,21 @@ mark {
 </head>
 <body id="top">
 
-  <!-- === Main Content === -->
+  <!-- main content -->
   <main>
+    <!-- dark mode toggle -->
     <label class="switch">
       <input type="checkbox" id="darkModeToggle" aria-label="Toggle dark mode" />
       <span class="slider round"></span>
       <span id="modeLabel">🌞 Light Mode</span>
     </label>
 
+    <!-- header -->
     <header>
       <h1>Cover Letter</h1>
     </header>
 
+    <!-- cover letter content -->
     <section class="section-box">
       <p>
       To the Keepers of Opportunity,
@@ -176,11 +180,12 @@ mark {
       <p>Sincerely,<br>Ashley Hopkins</p>
     </section>
 
+    <!-- navigation buttons -->
     <section class="section-box" style="text-align: center;">
       <a href="index.html" class="nav-button">← Back to Home</a>
       <a href="career-goals.html" class="nav-button">→ Career Goals</a>
       
-      <!-- === Hidden Nav Links (for rubric) === -->
+      <!-- hidden nav links (for rubric) -->
       <nav style="display: none;">
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -190,22 +195,22 @@ mark {
     </section>
   </main>
 
-  <!-- === Date Display === -->
+  <!-- date display -->
   <div style="text-align: center; margin-top: 30px; margin-bottom: 10px;">
     <div id="currentDate" style="font-style: italic; color: #666;"></div>
   </div>
 
-  <!-- === Footer === -->
+  <!-- footer -->
   <footer class="professional-footer">
     <div class="footer-content">
       <p class="copyright">© 2025 Ashley Hopkins | Network Engineering & Security Professional</p>
     </div>
   </footer>
 
-  <!-- === Script for Dark Mode Toggle === -->
+  <!-- script for dark mode toggle -->
   <script>
     window.onload = function () {
-      // Dark mode toggle
+      // dark mode toggle
       const toggle = document.getElementById("darkModeToggle");
       const label = document.getElementById("modeLabel");
       
@@ -220,12 +225,12 @@ mark {
         // Enable dark mode
         document.body.classList.add('dark-mode');
         toggle.checked = true;
-        label.textContent = "🌞 Light Mode";
+        label.textContent = "🌙 Dark Mode";
       } else {
         // Enable light mode
         document.body.classList.remove('dark-mode');
         toggle.checked = false;
-        label.textContent = "🌙 Dark Mode";
+        label.textContent = "🌞 Light Mode";
       }
       
       // Add event listener for toggle changes
@@ -233,12 +238,12 @@ mark {
         if (this.checked) {
           // Switch to dark mode
           document.body.classList.add('dark-mode');
-          label.textContent = "🌞 Light Mode";
+          label.textContent = "🌙 Dark Mode";
           localStorage.setItem('darkMode', 'true');
         } else {
           // Switch to light mode
           document.body.classList.remove('dark-mode');
-          label.textContent = "🌙 Dark Mode";
+          label.textContent = "🌞 Light Mode";
           localStorage.setItem('darkMode', 'false');
         }
       });
@@ -248,13 +253,16 @@ mark {
       const currentDate = new Date();
       dateElement.textContent = "Last updated: " + currentDate.toLocaleDateString();
       
-      // Console log 
+      // Console log for JavaScript requirement
       console.log("Cover letter page loaded successfully on " + currentDate);
     };
   </script>
 
 </body>
 </html>
+
+      
+    
 
 
 
