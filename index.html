@@ -527,7 +527,7 @@ mark {
    <!-- technical skills -->
 <section class="section-box" id="skills" style="text-align: center;">
   <h2>Technical Skills</h2>
-  <ul style="display: inline-block; text-align: center; list-style-type: none; padding-left: 0; max-width: 80%; margin: 0 auto;">
+  <ul style="display: inline-block; text-align: left; list-style-type: none; padding-left: 0; max-width: 80%; margin: 0 auto;">
     <li><strong>Networking:</strong> TCP/IP, DNS, DHCP, NAT, subnetting, VLANs, routing & switching, Cisco Packet Tracer, Wireshark</li>
     <li><strong>Systems Administration:</strong> Linux (Ubuntu/Kali), user management, permissions, file systems, Windows troubleshooting, Bash scripting</li>
     <li><strong>Web & Tools:</strong> HTML, CSS, JavaScript, Docker (basic), NGINX, web development fundamentals, self-hosted services</li>
@@ -602,15 +602,15 @@ mark {
   <div id="formWrapper">
     <form id="contactForm" onsubmit="submitForm(event)" class="beautiful-form">
       <div class="form-grid">
-        <div class="input-group">
-          <input type="text" name="name" id="name" required>
+        <div class="form-group">
           <label for="name">Name</label>
+          <input type="text" name="name" id="name" required>
           <span class="focus-border"></span>
         </div>
         
-        <div class="input-group">
-          <input type="email" name="email" id="email" required>
+        <div class="form-group">
           <label for="email">Email</label>
+          <input type="email" name="email" id="email" required>
           <span class="focus-border"></span>
         </div>
       </div>
@@ -707,12 +707,12 @@ mark {
         // Enable dark mode
         document.body.classList.add('dark-mode');
         toggle.checked = true;
-        label.textContent = "🌞 Light Mode";
+        label.textContent = "🌙 Dark Mode";
       } else {
         // Enable light mode
         document.body.classList.remove('dark-mode');
         toggle.checked = false;
-        label.textContent = "🌙 Dark Mode";
+        label.textContent = "🌞 Light Mode";
       }
       
       // Add event listener for toggle changes
@@ -720,12 +720,12 @@ mark {
         if (this.checked) {
           // Switch to dark mode
           document.body.classList.add('dark-mode');
-          label.textContent = "🌞 Light Mode";
+          label.textContent = "🌙 Dark Mode";
           localStorage.setItem('darkMode', 'true');
         } else {
           // Switch to light mode
           document.body.classList.remove('dark-mode');
-          label.textContent = "🌙 Dark Mode";
+          label.textContent = "🌞 Light Mode";
           localStorage.setItem('darkMode', 'false');
         }
       });
