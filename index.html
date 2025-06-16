@@ -6,14 +6,17 @@
   <title>My Resume</title>
   <link rel="stylesheet" href="css/styles.css">
   <style>
+    /* basic styles */
     * {
       box-sizing: border-box;
     }
     
     body {
+      font-family: Arial, sans-serif;
       background-color: #f0f4f8;
       color: #222;
-      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
     }
     .dark-mode {
       background-color: #121212;
@@ -87,6 +90,14 @@
       border-radius: 50%;
       transition: transform 0.4s;
     }
+    .slider.round {
+      border-radius: 34px;
+    }
+    
+    .slider.round:before {
+      border-radius: 50%;
+    }
+    
     input:checked + .slider {
       background-color: #4a90e2;
     }
@@ -186,8 +197,8 @@
 }
 
 .input-group input,
-.input-group select,
-.input-group textarea {
+.input-group textarea,
+.input-group select {
   width: 100%;
   padding: 1rem 0.75rem 0.5rem;
   border: 2px solid #e1e8ed;
@@ -473,23 +484,23 @@ mark {
 </head>
 <body id="top">
 
-  <!-- === Dark Mode Toggle === -->
+  <!-- dark mode toggle -->
   <label class="switch">
     <input type="checkbox" id="darkModeToggle">
     <span class="slider round"></span>
     <span id="modeLabel">🌞 Light Mode</span>
   </label>
 
-  <!-- === Header === -->
+  <!-- header -->
 <header style="padding: 50px 20px 60px;">
   <h1>Ashley "Patience" Hopkins</h1>
   <p>Future Network Engineer</p>
   <p style="font-size: 1rem;">Night Owl 🦉</p>
 </header>
 
-  <!-- === Main Content === -->
+  <!-- main content -->
   <main>
-    <!-- === Image and Summary === -->
+    <!-- image and summary -->
     <section class="section-box" style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 40px;">
       <img src="images/waterfall-profile.jpeg" width="300"
            style="border: 3px solid #2c3e50; border-radius: 15px; box-shadow: 0px 4px 20px rgba(0,0,0,0.2);"
@@ -498,25 +509,25 @@ mark {
       <div style="max-width: 480px;">
         <h2 style="margin-top: 0;">Professional Summary</h2>
         <p>
-         As an aspiring Network Engineer with hands-on experience configuring routers, switches, and firewalls in home lab environments, I bring a strong foundation in Linux administration and system troubleshooting. Currently pursuing my Bachelor's in Network Engineering and Security at WGU, I combine technical knowledge with a passion for building secure, reliable networks and solving complex challenges. My methodical approach and attention to detail make me well-suited for roles requiring both technical expertise and creative problem-solving.
+         As an aspiring Network Engineer with hands-on experience configuring routers, switches, and firewalls in home lab environments, I bring a strong foundation in Linux administration and system troubleshooting. Currently pursuing my Bachelor's in Network Engineering and Security at WGU, I combine technical knowledge with a passion for building secure, reliable networks and solving <em>complex technical challenges</em>. My methodical approach and attention to detail make me well-suited for roles requiring both technical expertise and creative problem-solving.
        </p>
       </div>
     </section>
 
-    <!-- === Navigation Buttons === -->
+    <!-- navigation buttons -->
     <section class="section-box" style="text-align: center;">
       <h2>Additional Documents</h2>
       <a href="coverletter.html" class="nav-button">View My Cover Letter</a>
       <a href="career-goals.html" class="nav-button">View My Career Goals</a>
     </section>
 
-    <!-- === Horizontal Rule === -->
+    <!-- horizontal rule -->
     <hr style="max-width: 800px; margin: 30px auto; border: 0; height: 2px; background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(44, 62, 80, 0.75), rgba(0, 0, 0, 0));">
 
-   <!-- === Technical Skills === -->
+   <!-- technical skills -->
 <section class="section-box" id="skills" style="text-align: center;">
   <h2>Technical Skills</h2>
-  <ul style="display: inline-block; text-align: left; list-style-type: none; padding-left: 0; max-width: 80%; margin: 0 auto;">
+  <ul style="display: inline-block; text-align: center; list-style-type: none; padding-left: 0; max-width: 80%; margin: 0 auto;">
     <li><strong>Networking:</strong> TCP/IP, DNS, DHCP, NAT, subnetting, VLANs, routing & switching, Cisco Packet Tracer, Wireshark</li>
     <li><strong>Systems Administration:</strong> Linux (Ubuntu/Kali), user management, permissions, file systems, Windows troubleshooting, Bash scripting</li>
     <li><strong>Web & Tools:</strong> HTML, CSS, JavaScript, Docker (basic), NGINX, web development fundamentals, self-hosted services</li>
@@ -525,7 +536,7 @@ mark {
   </ul>
 </section>
 
-<!-- === Education === -->
+<!-- education -->
 <section class="section-box" id="education" style="text-align: center;">
   <h2>Education</h2>
   <ul style="display: inline-block; text-align: left; list-style-type: none; padding-left: 0; max-width: 80%; margin: 0 auto;">
@@ -543,8 +554,7 @@ mark {
   </ul>
 </section>
 
-
-<!-- === Certifications === -->
+<!-- certifications -->
 <section class="section-box" id="certifications" style="text-align: center;">
   <h2>Certifications</h2>
   <ul style="display: inline-block; text-align: left; list-style-type: none; padding-left: 0; max-width: 80%; margin: 0 auto;">
@@ -554,9 +564,8 @@ mark {
   </ul>
 </section>
 
-
   
-    <!-- === Experience Table (Adding article and table elements) === -->
+    <!-- experience table -->
     <article class="section-box">
       <table class="experience-table">
         <caption>Professional Experience Summary</caption>
@@ -587,7 +596,7 @@ mark {
       </table>
     </article>
     
-<!-- === Contact Form === -->
+<!-- beautiful contact form -->
 <section class="section-box" id="contact-form">
   <h2>Contact Me</h2>
   <div id="formWrapper">
@@ -643,14 +652,14 @@ mark {
   </div>
 </section>
     
-   <!-- === Thank You === -->
+   <!-- thank you -->
 <section class="section-box" style="text-align: center;">
   <p style="font-size: 1.1rem;">
     <mark>Thank you for taking time to read my resume.</mark>
   </p>
 </section>
 
-   <!-- === Contact === -->
+   <!-- contact -->
     <section class="section-box" id="contact" style="text-align: center;">
       <h2>Contact</h2>
       <p><strong>Email:</strong> <a href="mailto:ahopki29@wgu.edu">ahopki29@wgu.edu</a></p>
@@ -661,7 +670,7 @@ mark {
     </section>
   </main>
 
-  <!-- === Hidden Nav Element === -->
+  <!-- hidden nav element -->
   <nav style="display: none;">
     <ul>
       <li><a href="#skills">Skills</a></li>
@@ -669,7 +678,7 @@ mark {
     </ul>
   </nav>
 
-<!-- === Footer with date === -->
+<!-- footer with date -->
 <div style="text-align: center; margin-top: 30px; margin-bottom: 10px;">
   <div id="currentDate" style="font-style: italic; color: #666;"></div>
 </div>
@@ -680,15 +689,45 @@ mark {
     </div>
   </footer>
 
-  <!-- === JavaScript === -->
+  <!-- javascript -->
   <script>
     window.onload = function () {
-      // Dark mode toggle
+      // dark mode toggle
       const toggle = document.getElementById("darkModeToggle");
       const label = document.getElementById("modeLabel");
-      toggle.addEventListener("change", () => {
-        document.body.classList.toggle("dark-mode");
-        label.textContent = toggle.checked ? "🌙 Dark Mode" : "🌞 Light Mode";
+      
+      // Check if user has a saved preference
+      const savedDarkMode = localStorage.getItem('darkMode');
+      
+      // Apply dark mode based on saved preference or system preference
+      if (savedDarkMode === 'true' || 
+          (savedDarkMode === null && 
+           window.matchMedia && 
+           window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        // Enable dark mode
+        document.body.classList.add('dark-mode');
+        toggle.checked = true;
+        label.textContent = "🌞 Light Mode";
+      } else {
+        // Enable light mode
+        document.body.classList.remove('dark-mode');
+        toggle.checked = false;
+        label.textContent = "🌙 Dark Mode";
+      }
+      
+      // Add event listener for toggle changes
+      toggle.addEventListener("change", function() {
+        if (this.checked) {
+          // Switch to dark mode
+          document.body.classList.add('dark-mode');
+          label.textContent = "🌞 Light Mode";
+          localStorage.setItem('darkMode', 'true');
+        } else {
+          // Switch to light mode
+          document.body.classList.remove('dark-mode');
+          label.textContent = "🌙 Dark Mode";
+          localStorage.setItem('darkMode', 'false');
+        }
       });
 
       // Display current date
@@ -747,3 +786,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
 </body>
 </html>
+
