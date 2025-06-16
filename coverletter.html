@@ -11,9 +11,9 @@
     }
     
     body {
+      font-family: Arial, sans-serif;
       background-color: #f0f4f8;
       color: #222;
-      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
     }
@@ -129,9 +129,21 @@
     .dark-mode .professional-footer {
       background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
     }
+
+mark {
+  background-color: #cce5ff; /* Light blue */
+  color: #004085; /* Dark blue text for contrast */
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+.dark-mode mark {
+  background-color: #004085; /* Darker blue for dark mode */
+  color: #cce5ff; /* Light blue text for contrast in dark mode */
+}
   </style>
 </head>
-<body>
+<body id="top">
 
   <!-- === Main Content === -->
   <main>
@@ -159,7 +171,7 @@
         I find particular joy in configuring virtual machines, self-hosting cloud solutions, and solving complex technical problems. I'm seeking a team that values continuous learning, appreciates <em>different thinking styles</em>, and embraces the interesting learning curves that come with innovation.
       </p>
       <p>
-        Thank you for considering how my <em>unique perspective</em> might benefit your organization.
+        <mark>Thank you for considering how my <em>unique perspective</em> might benefit your organization.</mark>
       </p>
       <p>Sincerely,<br>Ashley Hopkins</p>
     </section>
@@ -196,9 +208,39 @@
       // Dark mode toggle
       const toggle = document.getElementById("darkModeToggle");
       const label = document.getElementById("modeLabel");
-      toggle.addEventListener("change", () => {
-        document.body.classList.toggle("dark-mode");
-        label.textContent = toggle.checked ? "🌙 Dark Mode" : "🌞 Light Mode";
+      
+      // Check if user has a saved preference
+      const savedDarkMode = localStorage.getItem('darkMode');
+      
+      // Apply dark mode based on saved preference or system preference
+      if (savedDarkMode === 'true' || 
+          (savedDarkMode === null && 
+           window.matchMedia && 
+           window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        // Enable dark mode
+        document.body.classList.add('dark-mode');
+        toggle.checked = true;
+        label.textContent = "🌞 Light Mode";
+      } else {
+        // Enable light mode
+        document.body.classList.remove('dark-mode');
+        toggle.checked = false;
+        label.textContent = "🌙 Dark Mode";
+      }
+      
+      // Add event listener for toggle changes
+      toggle.addEventListener("change", function() {
+        if (this.checked) {
+          // Switch to dark mode
+          document.body.classList.add('dark-mode');
+          label.textContent = "🌞 Light Mode";
+          localStorage.setItem('darkMode', 'true');
+        } else {
+          // Switch to light mode
+          document.body.classList.remove('dark-mode');
+          label.textContent = "🌙 Dark Mode";
+          localStorage.setItem('darkMode', 'false');
+        }
       });
       
       // Display current date
@@ -213,5 +255,3 @@
 
 </body>
 </html>
-
-
