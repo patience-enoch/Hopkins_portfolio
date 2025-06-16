@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="css/styles.css">
 
   <style>
+    /* === basic styles === */
     * {
       box-sizing: border-box;
     }
@@ -233,7 +234,7 @@
       }
     }
 
-    /* Footer Styles  */
+    /* === footer styles === */
     .professional-footer {
       margin-top: 2rem;
       padding: 1.5rem;
@@ -259,6 +260,7 @@
       background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
     }
 
+    /* === highlight styles === */
 mark {
   background-color: #cce5ff; /* Light blue */
   color: #004085; /* Dark blue text for contrast */
@@ -273,21 +275,21 @@ mark {
     
   </style>
 </head>
-<body>
+<body id="top">
 
-  <!-- === Dark Mode Toggle === -->
+  <!-- === dark mode toggle === -->
   <label class="dark-toggle">
     <input type="checkbox" id="darkModeToggle">
     <span class="slider round"></span>
     <span id="modeLabel">🌞 Light Mode</span>
   </label>
 
-  <!-- === Header === -->
+  <!-- === header === -->
   <header>
     <h1>Career Goals</h1>
   </header>
 
-  <!-- === Career Goals === -->
+  <!-- === career goals === -->
   <section class="section-box">
     <p>
      My career goal is to work in cloud infrastructure or network security in a <em>remote</em> role. As someone who thrives in focused, structured environments, I excel when given space for deep concentration and technical creativity. I'm methodically building a strong foundation in Linux, networking, and cybersecurity, with the clear vision of becoming either a cloud systems engineer or remote IT support specialist.
@@ -308,14 +310,14 @@ mark {
     <div class="river-accent"></div>
   </section>
 
-<!-- === Thank You Box === -->
-<section class="section-box" style="text-align: center;">
-  <p style="font-size: 1.1rem;">
-    <mark>Thank you for reviewing my career goals. I appreciate your time and interest in my journey.</mark>
-  </p>
-</section>
+  <!-- === thank you box === -->
+  <section class="section-box" style="text-align: center;">
+    <p style="font-size: 1.1rem;">
+      <mark>Thank you for reviewing my career goals. I appreciate your time and interest in my journey.</mark>
+    </p>
+  </section>
 
- <!-- === Chill Sound Toggle Button === -->
+  <!-- === chill sound toggle button === -->
   <p style="text-align: center; margin-top: 2rem;">
     <button id="natureBtn" onclick="toggleNatureSound()" style="
       padding: 8px 16px;
@@ -335,12 +337,12 @@ mark {
     <source src="media/lazyday.mp3" type="audio/mpeg">
   </audio>
 
-  <!-- === WGU Logo === -->
+  <!-- === wgu logo === -->
   <div style="text-align: center; margin: 2rem 0;">
     <img src="images/nightowl.jpeg" alt="WGU Night Owl Logo" style="border-radius: 10px;" />
   </div>
 
-  <!-- === Snoopy Dancing Video === -->
+  <!-- === snoopy dancing video === -->
   <div class="video-wrapper" style="text-align:center;">
     <h3>Here's a little joy boost for your day!</h3>
     <iframe width="100%" height="270" src="https://www.youtube.com/embed/l4_VMcxoxrk"
@@ -350,7 +352,7 @@ mark {
     </iframe>
   </div>
 
-  <!-- === Credits === -->
+  <!-- === credits === -->
   <footer style="margin-top: 50px; padding: 20px; background-color: #f0f4f8; border-top: 2px solid #ccc; font-size: 0.95em; color: #333; text-align: center; font-family: Arial, sans-serif;">
     <h4 style="margin-bottom: 10px; color: #2a2a2a;">Credits & Attributions</h4>
     <ul style="list-style-type: none; padding: 0; margin: 0;">
@@ -360,12 +362,12 @@ mark {
     </ul>
   </footer>
 
-  <!-- === Back to Home Link === -->
+  <!-- === back to home link === -->
   <section class="section-box" style="text-align: center;">
     <a href="index.html" class="nav-button">← Back to Home</a>
   </section>
 
-  <!-- === Hidden Nav === -->
+  <!-- === hidden nav === -->
   <nav style="display: none;">
     <ul>
       <li><a href="index.html">Home</a></li>
@@ -373,19 +375,19 @@ mark {
     </ul>
   </nav>
   
-  <!-- === Date Display === -->
+  <!-- === date display === -->
   <div style="text-align: center; margin-top: 30px; margin-bottom: 10px;">
     <div id="currentDate" style="font-style: italic; color: #666;"></div>
   </div>
 
-  <!-- === Footer === -->
+  <!-- === footer === -->
   <footer class="professional-footer">
     <div class="footer-content">
       <p class="copyright">© 2025 Ashley Hopkins | Network Engineering & Security Professional</p>
     </div>
   </footer>
 
-  <!-- === Scripts === -->
+  <!-- === scripts === -->
   <script>
     function toggleNatureSound() {
       const audio = document.getElementById("natureAudio");
@@ -399,36 +401,43 @@ mark {
       }
     }
 
-  window.onload = function() {
-  const toggle = document.getElementById("darkModeToggle");
-  const label = document.getElementById("modeLabel");
-  
-  // Check if dark mode preference is stored in localStorage
-  const isDarkMode = localStorage.getItem("darkMode") === "true";
-  
-  // Apply initial state based on localStorage or default to light mode
-  if (isDarkMode) {
-    document.body.classList.add("dark-mode");
-    toggle.checked = true;
-    label.textContent = "🌞 Light Mode";
-  } else {
-    document.body.classList.remove("dark-mode");
-    toggle.checked = false;
-    label.textContent = "🌙 Dark Mode";
-  }
-  
-  // Event listener
-  toggle.addEventListener("change", () => {
-    if (toggle.checked) {
-      document.body.classList.add("dark-mode");
-      label.textContent = "🌞 Light Mode";
-      localStorage.setItem("darkMode", "true");
-    } else {
-      document.body.classList.remove("dark-mode");
-      label.textContent = "🌙 Dark Mode";
-      localStorage.setItem("darkMode", "false");
-    }
-  });
+    window.onload = function () {
+      const toggle = document.getElementById("darkModeToggle");
+      const label = document.getElementById("modeLabel");
+      
+      // Check if user has a saved preference
+      const savedDarkMode = localStorage.getItem('darkMode');
+      
+      // Apply dark mode based on saved preference or system preference
+      if (savedDarkMode === 'true' || 
+          (savedDarkMode === null && 
+           window.matchMedia && 
+           window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        // Enable dark mode
+        document.body.classList.add('dark-mode');
+        toggle.checked = true;
+        label.textContent = "🌞 Light Mode";
+      } else {
+        // Enable light mode
+        document.body.classList.remove('dark-mode');
+        toggle.checked = false;
+        label.textContent = "🌙 Dark Mode";
+      }
+      
+      // Add event listener for toggle changes
+      toggle.addEventListener("change", function() {
+        if (this.checked) {
+          // Switch to dark mode
+          document.body.classList.add('dark-mode');
+          label.textContent = "🌞 Light Mode";
+          localStorage.setItem('darkMode', 'true');
+        } else {
+          // Switch to light mode
+          document.body.classList.remove('dark-mode');
+          label.textContent = "🌙 Dark Mode";
+          localStorage.setItem('darkMode', 'false');
+        }
+      });
       
       // Display current date
       const dateElement = document.getElementById("currentDate");
@@ -440,4 +449,4 @@ mark {
     };
   </script>
 </body>
-</html>
+</html>"}</function>
