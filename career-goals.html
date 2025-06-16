@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="css/styles.css">
 
   <style>
-    /* === Basic Styles === */
+    /* basic styles */
     * {
       box-sizing: border-box;
     }
@@ -262,17 +262,16 @@
 
     /* === Highlight Styles === */
 mark {
-  background-color: #cce5ff;
-  color: #004085;
-  padding: 2px 4px;
-  border-radius: 3px;
-}
+      background-color: #cce5ff;
+      color: #004085;
+      padding: 2px 4px;
+      border-radius: 3px;
+    }
 
-.dark-mode mark {
-  background-color: #004085;
-  color: #cce5ff;
-}
-    
+    .dark-mode mark {
+      background-color: #004085;
+      color: #cce5ff;
+    }
   </style>
 </head>
 <body id="top">
@@ -284,16 +283,16 @@ mark {
     <span id="modeLabel">🌞 Light Mode</span>
   </label>
 
-  <!-- === Header === -->
+  <!-- === Header Section === -->
   <header>
     <h1>Career Goals</h1>
   </header>
 
-  <!-- === Career Goals === -->
+  <!-- === Career Goals Content Section === -->
   <section class="section-box">
     <p>
      My career goal is to work in cloud infrastructure or network security in a <em>remote</em> role. As someone who thrives in focused, structured environments, I excel when given space for deep concentration and technical creativity. I'm methodically building a strong foundation in Linux, networking, and cybersecurity, with the clear vision of becoming either a cloud systems engineer or remote IT support specialist.
-     </p>
+    </p>
 
     <h3>Roles I'm Actively Preparing For:</h3>
     <ul>
@@ -353,12 +352,12 @@ mark {
   </div>
 
   <!-- === Credits === -->
-  <footer style="margin-top: 50px; padding: 20px; background-color: #f0f4f8; border-top: 2px solid #ccc; font-size: 0.95em; color: #333; text-align: center; font-family: Arial, sans-serif;">
-    <h4 style="margin-bottom: 10px; color: #2a2a2a;">Credits & Attributions</h4>
+  <footer class="credits-footer">
+    <h4 style="margin-bottom: 10px; color: inherit;">Credits & Attributions</h4>
     <ul style="list-style-type: none; padding: 0; margin: 0;">
       <li style="margin-bottom: 8px;">WGU owl logo © Western Governors University. Used for academic purposes.</li>
       <li style="margin-bottom: 8px;">Snoopy video © Peanuts Worldwide LLC. Used under fair use for educational purposes.</li>
-      <li style="margin-bottom: 8px;">Nature audio from <a href="https://freesound.org" target="_blank" style="color: #0056b3; text-decoration: none;">Freesound.org</a>.</li>
+      <li style="margin-bottom: 8px;">Nature audio from <a href="https://freesound.org" target="_blank" style="color: inherit; text-decoration: none;">Freesound.org</a>.</li>
     </ul>
   </footer>
 
@@ -402,6 +401,7 @@ mark {
     }
 
     window.onload = function () {
+      // Dark mode toggle
       const toggle = document.getElementById("darkModeToggle");
       const label = document.getElementById("modeLabel");
       
@@ -416,12 +416,12 @@ mark {
         // Enable dark mode
         document.body.classList.add('dark-mode');
         toggle.checked = true;
-        label.textContent = "🌞 Light Mode";
+        label.textContent = "🌙 Dark Mode";
       } else {
         // Enable light mode
         document.body.classList.remove('dark-mode');
         toggle.checked = false;
-        label.textContent = "🌙 Dark Mode";
+        label.textContent = "🌞 Light Mode";
       }
       
       // Add event listener for toggle changes
@@ -429,12 +429,12 @@ mark {
         if (this.checked) {
           // Switch to dark mode
           document.body.classList.add('dark-mode');
-          label.textContent = "🌞 Light Mode";
+          label.textContent = "🌙 Dark Mode";
           localStorage.setItem('darkMode', 'true');
         } else {
           // Switch to light mode
           document.body.classList.remove('dark-mode');
-          label.textContent = "🌙 Dark Mode";
+          label.textContent = "🌞 Light Mode";
           localStorage.setItem('darkMode', 'false');
         }
       });
@@ -450,3 +450,4 @@ mark {
   </script>
 </body>
 </html>
+
