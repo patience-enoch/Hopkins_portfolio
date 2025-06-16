@@ -402,17 +402,28 @@ mark {
     window.onload = function () {
       const toggle = document.getElementById("darkModeToggle");
       const label = document.getElementById("modeLabel");
-      toggle.addEventListener("change", () => {
-        document.body.classList.toggle("dark-mode");
-        label.textContent = toggle.checked ? "🌙 Dark Mode" : "🌞 Light Mode";
-      });
+
+      // Set initial state based on body class 
+  if (document.body.classList.contains("dark-mode")) {
+    toggle.checked = true;
+    label.textContent = "🌞 Light Mode";
+  } else {
+    toggle.checked = false;
+    label.textContent = "🌙 Dark Mode";
+  }
+  
+  // Event listener
+  toggle.addEventListener("change", () => {
+    document.body.classList.toggle("dark-mode");
+    label.textContent = toggle.checked ? "🌞 Light Mode" : "🌙 Dark Mode";
+  });
       
       // Display current date
       const dateElement = document.getElementById("currentDate");
       const currentDate = new Date();
       dateElement.textContent = "Last updated: " + currentDate.toLocaleDateString();
       
-      // Console log for JavaScript requirement
+      // Console log 
       console.log("Career goals page loaded successfully on " + currentDate);
     };
   </script>
