@@ -272,6 +272,115 @@ mark {
       background-color: #004085;
       color: #cce5ff;
     }
+    
+    /* === Contact Form Styling === */
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      color: #2c3e50;
+    }
+    
+    .dark-mode .form-group label {
+      color: #ecf0f1;
+    }
+    
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 0.8rem;
+      border: 2px solid #e1e8ed;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-family: inherit;
+      background-color: #f8f9fa;
+      color: #333;
+      transition: all 0.3s ease;
+    }
+    
+    .dark-mode .form-group input,
+    .dark-mode .form-group textarea,
+    .dark-mode .form-group select {
+      background-color: #2a2a2a;
+      border-color: #444;
+      color: #f0f0f0;
+    }
+    
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: #3498db;
+      box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+    }
+    
+    .form-group textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+    
+    .radio-group {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 0.5rem;
+    }
+    
+    .radio-option {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .radio-option input[type="radio"] {
+      width: auto;
+      margin: 0;
+    }
+    
+    .submit-btn {
+      background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+      color: white;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: block;
+      width: 100%;
+      margin-top: 1rem;
+    }
+    
+    .submit-btn:hover {
+      background: linear-gradient(135deg, #34495e 0%, #2980b9 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+    }
+    
+    .success-message {
+      display: none;
+      text-align: center;
+      padding: 2rem;
+      background-color: #d4edda;
+      color: #155724;
+      border-radius: 8px;
+      margin-top: 1rem;
+    }
+    
+    .dark-mode .success-message {
+      background-color: #1e3a2b;
+      color: #a3d9b5;
+    }
   </style>
 </head>
 <body id="top">
@@ -309,6 +418,84 @@ mark {
     <div class="river-accent"></div>
   </section>
 
+  <!-- === Contact Form Section (Added as required by WGU) === -->
+  <section class="section-box" id="contact-form">
+    <h2>Contact Me</h2>
+    <div id="formWrapper">
+      <!-- Form with action attribute URL as required -->
+      <form id="contactForm" action="https://example.com/submit-form" method="post" onsubmit="submitForm(event)" class="contact-form">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        
+        <div class="form-group">
+          <!-- Company name field as required -->
+          <label for="company">Company Name</label>
+          <input type="text" id="company" name="company" required>
+        </div>
+        
+        <div class="form-group">
+          <!-- Email address with type=email as required -->
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        
+        <div class="form-group">
+          <!-- Phone number with type=tel as required -->
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+        
+        <div class="form-group">
+          <!-- Message textarea as required -->
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+        
+        <div class="form-group">
+          <label>Best time to contact:</label>
+          <div class="radio-group">
+            <!-- Radio buttons as required -->
+            <div class="radio-option">
+              <input type="radio" id="am" name="contact-time" value="am">
+              <label for="am">Morning (AM)</label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" id="pm" name="contact-time" value="pm">
+              <label for="pm">Afternoon (PM)</label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" id="anytime" name="contact-time" value="anytime" checked>
+              <label for="anytime">Anytime</label>
+            </div>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <!-- Select dropdown as required -->
+          <label for="position">Position of Interest</label>
+          <select id="position" name="position" required>
+            <option value="" disabled selected>Select a position</option>
+            <option value="cloud-admin">Cloud Systems Administrator</option>
+            <option value="security-analyst">Cybersecurity Analyst</option>
+            <option value="it-support">IT Support Engineer</option>
+            <option value="linux-admin">Linux System Administrator</option>
+            <option value="cloud-security">Cloud Security Specialist</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        
+        <button type="submit" class="submit-btn">Submit Message</button>
+      </form>
+    </div>
+    
+    <div id="thankYouMessage" class="success-message">
+      <h3>Thank You!</h3>
+      <p>Your message has been received. I'll get back to you soon.</p>
+    </div>
+  </section>
+
   <!-- === Thank You Box === -->
   <section class="section-box" style="text-align: center;">
     <p style="font-size: 1.1rem;">
@@ -328,7 +515,7 @@ mark {
       font-weight: bold;
       box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     ">
-      🎵 Play Chill Sounds
+      🎵 Play for chill music
     </button>
   </p>
 
@@ -393,11 +580,50 @@ mark {
       const button = document.getElementById("natureBtn");
       if (audio.paused) {
         audio.play();
-        button.innerHTML = "⏸️ Pause Chill Sounds";
+        button.innerHTML = "⏸️ Pause chill music";
       } else {
         audio.pause();
-        button.innerHTML = "🎵 Play Chill Sounds";
+        button.innerHTML = "🎵 Play for chill music";
       }
+    }
+    
+    // Form submission function
+    function submitForm(event) {
+      event.preventDefault();
+      
+      // Get form values for logging (required by WGU)
+      const name = document.getElementById('name').value;
+      const company = document.getElementById('company').value;
+      const email = document.getElementById('email').value;
+      const phone = document.getElementById('phone').value;
+      const message = document.getElementById('message').value;
+      const position = document.getElementById('position').value;
+      
+      // Determine selected radio button
+      let contactTime = "";
+      if (document.getElementById('am').checked) {
+        contactTime = "Morning (AM)";
+      } else if (document.getElementById('pm').checked) {
+        contactTime = "Afternoon (PM)";
+      } else if (document.getElementById('anytime').checked) {
+        contactTime = "Anytime";
+      }
+      
+      // Log form data (required by WGU)
+      console.log('Form submitted with the following data:');
+      console.log('Name: ' + name);
+      console.log('Company: ' + company);
+      console.log('Email: ' + email);
+      console.log('Phone: ' + phone);
+      console.log('Message: ' + message);
+      console.log('Position: ' + position);
+      console.log('Contact Time: ' + contactTime);
+      
+      // Hide form and show thank you message
+      document.getElementById('formWrapper').style.display = 'none';
+      document.getElementById('thankYouMessage').style.display = 'block';
+      
+      return false;
     }
 
     window.onload = function () {
@@ -446,8 +672,27 @@ mark {
       
       // Console log 
       console.log("Career goals page loaded successfully on " + currentDate);
+      
+      // Format phone number as user types
+      const phoneInput = document.getElementById('phone');
+      if (phoneInput) {
+        phoneInput.addEventListener('input', function(e) {
+          let value = e.target.value.replace(/\D/g, ''); // Remove non-digits
+          if (value.length > 0) {
+            if (value.length <= 3) {
+              value = value;
+            } else if (value.length <= 6) {
+              value = value.slice(0, 3) + '-' + value.slice(3);
+            } else {
+              value = value.slice(0, 3) + '-' + value.slice(3, 6) + '-' + value.slice(6, 10);
+            }
+          }
+          e.target.value = value;
+        });
+      }
     };
   </script>
 </body>
 </html>
+
 
