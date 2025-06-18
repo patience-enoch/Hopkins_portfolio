@@ -1,15 +1,16 @@
-/* === Universal Selector (Adding this to meet requirement) === */
+/* === Universal Selector === */
 * {
   box-sizing: border-box;
 }
 
 /* === General Body === */
 body {
-  font-family: Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   background-color: #f7f9fc;
-  color: #000;
+  color: #333;
   margin: 0;
   padding: 0;
+  line-height: 1.6;
 }
 
 /* === Dark Mode === */
@@ -26,6 +27,7 @@ header {
   padding: 40px 20px 60px;
   position: relative;
   z-index: 1;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 header h1 {
@@ -45,16 +47,16 @@ header p {
 .main-nav {
   background-color: #1a252f;
   padding: 10px 0;
-  text-align: center;
 }
 
 .main-nav ul {
   list-style: none;
-  padding: 0;
+  padding: 0.5rem 0;
   margin: 0;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  text-align: center;
 }
 
 .main-nav li {
@@ -86,6 +88,11 @@ header p {
   background-color: #fff;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.section-box:hover, section:hover, article:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
 /* === Horizontal Rule === */
@@ -144,6 +151,7 @@ mark {
   background-color: #ffeeba;
   padding: 2px 4px;
   border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .dark-mode mark {
@@ -271,6 +279,7 @@ input:checked + .slider:before {
 .dark-mode article {
   background-color: #1e1e1e;
   color: #f0f0f0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .dark-mode section h2,
@@ -308,40 +317,47 @@ input:checked + .slider:before {
 }
 
 /* === Form Styles === */
-.contact-form {
-  max-width: 100%;
-}
-
-.form-group {
+.contact-form .form-group {
   margin-bottom: 20px;
 }
 
-.form-group label {
+.contact-form .form-group label {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
+  color: #2c3e50;
 }
 
-.form-group input,
-.form-group textarea,
-.form-group select {
+.dark-mode .contact-form .form-group label {
+  color: #ecf0f1;
+}
+
+.contact-form .form-group input,
+.contact-form .form-group textarea,
+.contact-form .form-group select {
   width: 100%;
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 4px;
   font-size: 16px;
+  font-family: Arial, sans-serif;
+  transition: border-color 0.3s;
 }
 
-.radio-group {
-  display: flex;
-  gap: 15px;
-  margin-top: 5px;
+.contact-form .form-group input:focus,
+.contact-form .form-group textarea:focus,
+.contact-form .form-group select:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
 }
 
-.radio-group label {
-  display: flex;
-  align-items: center;
-  font-weight: normal;
+.dark-mode .contact-form .form-group input,
+.dark-mode .contact-form .form-group textarea,
+.dark-mode .form-group select {
+  background-color: #2a2a2a;
+  border-color: #444;
+  color: #f0f0f0;
 }
 
 /* === Current Date Display === */
@@ -376,6 +392,7 @@ input:checked + .slider:before {
   font-weight: 500;
   margin: 0 0 0.3rem 0;
   letter-spacing: 0.4px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .tagline {
@@ -384,9 +401,9 @@ input:checked + .slider:before {
   color: rgba(255, 255, 255, 0.8);
   margin: 0;
   letter-spacing: 0.2px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .dark-mode .professional-footer {
   background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
 }
-
